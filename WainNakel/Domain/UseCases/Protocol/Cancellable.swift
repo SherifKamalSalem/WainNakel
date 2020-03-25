@@ -1,5 +1,5 @@
 //
-//  UseCase.swift
+//  Cancellable.swift
 //  WainNakel
 //
 //  Created by Sherif Kamal on 3/25/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-public protocol UseCase {
-    @discardableResult
-    func start() -> Cancellable?
+public protocol Cancellable {
+    func cancel()
 }

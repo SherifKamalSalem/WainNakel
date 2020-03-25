@@ -20,6 +20,16 @@
 		85594F0D242BF43B009A5141 /* WainNakelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F0C242BF43B009A5141 /* WainNakelUITests.swift */; };
 		85594F25242BF826009A5141 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F24242BF826009A5141 /* Resturant.swift */; };
 		85594F2A242C0295009A5141 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F29242C0295009A5141 /* UseCase.swift */; };
+		85594F2C242C0361009A5141 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F2B242C0361009A5141 /* Cancellable.swift */; };
+		85594F2E242C044F009A5141 /* SuggestResturantUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */; };
+		85594F32242C0720009A5141 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F31242C0720009A5141 /* API.swift */; };
+		85594F35242C0E1A009A5141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F34242C0E1A009A5141 /* Constants.swift */; };
+		85594F37242C1044009A5141 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F36242C1044009A5141 /* Networking.swift */; };
+		85594F39242C1505009A5141 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F38242C1505009A5141 /* Reachability.swift */; };
+		85594F3B242C153D009A5141 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3A242C153D009A5141 /* Cache.swift */; };
+		85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3C242C1633009A5141 /* NetworkManager.swift */; };
+		85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */; };
+		85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +74,16 @@
 		85594F0E242BF43B009A5141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85594F24242BF826009A5141 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		85594F29242C0295009A5141 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		85594F2B242C0361009A5141 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResturantUseCase.swift; sourceTree = "<group>"; };
+		85594F31242C0720009A5141 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		85594F34242C0E1A009A5141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		85594F36242C1044009A5141 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		85594F38242C1505009A5141 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		85594F3A242C153D009A5141 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		85594F3C242C1633009A5141 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResturantRepository.swift; sourceTree = "<group>"; };
+		85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSuggestResturantRepository.swift; sourceTree = "<group>"; };
 		D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WainNakel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +153,8 @@
 		85594EE9242BF439009A5141 /* WainNakel */ = {
 			isa = PBXGroup;
 			children = (
+				85594F33242C0E0C009A5141 /* Common */,
+				85594F2F242C057A009A5141 /* Infrastructure */,
 				85594F1C242BF4D6009A5141 /* Data */,
 				85594F1B242BF4CA009A5141 /* Domain */,
 				85594F1A242BF4C1009A5141 /* Presentation */,
@@ -204,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				85594F28242C027F009A5141 /* Protocol */,
+				85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -219,6 +242,7 @@
 		85594F20242BF646009A5141 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -233,6 +257,7 @@
 		85594F22242BF6A7009A5141 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -248,8 +273,37 @@
 			isa = PBXGroup;
 			children = (
 				85594F29242C0295009A5141 /* UseCase.swift */,
+				85594F2B242C0361009A5141 /* Cancellable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		85594F2F242C057A009A5141 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				85594F30242C059B009A5141 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		85594F30242C059B009A5141 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				85594F31242C0720009A5141 /* API.swift */,
+				85594F36242C1044009A5141 /* Networking.swift */,
+				85594F38242C1505009A5141 /* Reachability.swift */,
+				85594F3A242C153D009A5141 /* Cache.swift */,
+				85594F3C242C1633009A5141 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		85594F33242C0E0C009A5141 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				85594F34242C0E1A009A5141 /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BAD7F949B6F33CA77D8F721E /* Frameworks */ = {
@@ -501,11 +555,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85594F2E242C044F009A5141 /* SuggestResturantUseCase.swift in Sources */,
+				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
+				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,
 				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
+				85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */,
 				85594EEF242BF439009A5141 /* ViewController.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
+				85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */,
+				85594F37242C1044009A5141 /* Networking.swift in Sources */,
 				85594F25242BF826009A5141 /* Resturant.swift in Sources */,
+				85594F39242C1505009A5141 /* Reachability.swift in Sources */,
+				85594F32242C0720009A5141 /* API.swift in Sources */,
 				85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */,
+				85594F3B242C153D009A5141 /* Cache.swift in Sources */,
+				85594F35242C0E1A009A5141 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ETH2M29NBU;
 				INFOPLIST_FILE = WainNakel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -699,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ETH2M29NBU;
 				INFOPLIST_FILE = WainNakel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (

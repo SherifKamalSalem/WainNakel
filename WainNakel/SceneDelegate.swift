@@ -2,12 +2,13 @@
 //  SceneDelegate.swift
 //  WainNakel
 //
-//  Created by Xpress Integration on 3/25/20.
+//  Created by Sherif Kamal on 3/25/20.
 //  Copyright © 2020 Aqwas. All rights reserved.
 //
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

@@ -9,5 +9,17 @@
 import Foundation
 
 protocol SuggestResturantUseCase {
-    func getRandomResturant()
+    func suggestRandomResturant(UID: String, completion: @escaping Callback<Resturant>)
+}
+
+final class DefaultSuggestResturantUseCase: SuggestResturantUseCase {
+    private let suggestResturantRepository: SuggestResturantRepository
+    
+    init(suggestResturantRepository: SuggestResturantRepository) {
+        self.suggestResturantRepository = suggestResturantRepository
+    }
+    
+    func suggestRandomResturant(UID: String, completion: @escaping Callback<Resturant>) {
+        suggestResturantRepository.getRandomResturant(UID: UID, completion: completion)
+    }
 }
