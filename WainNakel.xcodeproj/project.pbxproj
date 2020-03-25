@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19CDEF4255DEB9EA5F04C5E6 /* Pods_WainNakel_WainNakelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2036D21F84E53931ACFC3953 /* Pods_WainNakel_WainNakelUITests.framework */; };
+		690151661707D9537B93E3BD /* Pods_WainNakelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8C1202D44AA2845582968F /* Pods_WainNakelTests.framework */; };
+		740EB986C5F4F693942591DC /* Pods_WainNakel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
 		85594EEF242BF439009A5141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEE242BF439009A5141 /* ViewController.swift */; };
@@ -15,6 +18,8 @@
 		85594EF7242BF43B009A5141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF5242BF43B009A5141 /* LaunchScreen.storyboard */; };
 		85594F02242BF43B009A5141 /* WainNakelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F01242BF43B009A5141 /* WainNakelTests.swift */; };
 		85594F0D242BF43B009A5141 /* WainNakelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F0C242BF43B009A5141 /* WainNakelUITests.swift */; };
+		85594F25242BF826009A5141 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F24242BF826009A5141 /* Resturant.swift */; };
+		85594F2A242C0295009A5141 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F29242C0295009A5141 /* UseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A8C1202D44AA2845582968F /* Pods_WainNakelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WainNakelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE8D4C690CB4FFC5BF3A147 /* Pods-WainNakel-WainNakelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel-WainNakelUITests.release.xcconfig"; path = "Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2036D21F84E53931ACFC3953 /* Pods_WainNakel_WainNakelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WainNakel_WainNakelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		255590A49A6179963294E692 /* Pods-WainNakelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakelTests.debug.xcconfig"; path = "Target Support Files/Pods-WainNakelTests/Pods-WainNakelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49E453A8EF87BAC360D7EF02 /* Pods-WainNakel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel.debug.xcconfig"; path = "Target Support Files/Pods-WainNakel/Pods-WainNakel.debug.xcconfig"; sourceTree = "<group>"; };
+		5D6F09DA658D4E2C7189928A /* Pods-WainNakel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel.release.xcconfig"; path = "Target Support Files/Pods-WainNakel/Pods-WainNakel.release.xcconfig"; sourceTree = "<group>"; };
+		5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakelTests.release.xcconfig"; path = "Target Support Files/Pods-WainNakelTests/Pods-WainNakelTests.release.xcconfig"; sourceTree = "<group>"; };
+		68F8E4F69DCBF85E067416B7 /* Pods-WainNakel-WainNakelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel-WainNakelUITests.debug.xcconfig"; path = "Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85594EEC242BF439009A5141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		85594F08242BF43B009A5141 /* WainNakelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WainNakelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594F0C242BF43B009A5141 /* WainNakelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WainNakelUITests.swift; sourceTree = "<group>"; };
 		85594F0E242BF43B009A5141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85594F24242BF826009A5141 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		85594F29242C0295009A5141 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WainNakel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740EB986C5F4F693942591DC /* Pods_WainNakel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690151661707D9537B93E3BD /* Pods_WainNakelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CDEF4255DEB9EA5F04C5E6 /* Pods_WainNakel_WainNakelUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8000F767E46C8401BF0567 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E453A8EF87BAC360D7EF02 /* Pods-WainNakel.debug.xcconfig */,
+				5D6F09DA658D4E2C7189928A /* Pods-WainNakel.release.xcconfig */,
+				68F8E4F69DCBF85E067416B7 /* Pods-WainNakel-WainNakelUITests.debug.xcconfig */,
+				1CE8D4C690CB4FFC5BF3A147 /* Pods-WainNakel-WainNakelUITests.release.xcconfig */,
+				255590A49A6179963294E692 /* Pods-WainNakelTests.debug.xcconfig */,
+				5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85594EDE242BF439009A5141 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,8 @@
 				85594F00242BF43B009A5141 /* WainNakelTests */,
 				85594F0B242BF43B009A5141 /* WainNakelUITests */,
 				85594EE8242BF439009A5141 /* Products */,
+				1F8000F767E46C8401BF0567 /* Pods */,
+				BAD7F949B6F33CA77D8F721E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +133,9 @@
 		85594EE9242BF439009A5141 /* WainNakel */ = {
 			isa = PBXGroup;
 			children = (
+				85594F1C242BF4D6009A5141 /* Data */,
+				85594F1B242BF4CA009A5141 /* Domain */,
+				85594F1A242BF4C1009A5141 /* Presentation */,
 				85594EEA242BF439009A5141 /* AppDelegate.swift */,
 				85594EEC242BF439009A5141 /* SceneDelegate.swift */,
 				85594EEE242BF439009A5141 /* ViewController.swift */,
@@ -128,6 +165,103 @@
 			path = WainNakelUITests;
 			sourceTree = "<group>";
 		};
+		85594F1A242BF4C1009A5141 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				85594F21242BF661009A5141 /* SplashScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		85594F1B242BF4CA009A5141 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				85594F1F242BF62D009A5141 /* Interfaces */,
+				85594F1E242BF61A009A5141 /* UseCases */,
+				85594F1D242BF611009A5141 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		85594F1C242BF4D6009A5141 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				85594F23242BF6B9009A5141 /* Network */,
+				85594F22242BF6A7009A5141 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		85594F1D242BF611009A5141 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				85594F24242BF826009A5141 /* Resturant.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		85594F1E242BF61A009A5141 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				85594F28242C027F009A5141 /* Protocol */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		85594F1F242BF62D009A5141 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				85594F20242BF646009A5141 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		85594F20242BF646009A5141 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		85594F21242BF661009A5141 /* SplashScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashScene;
+			sourceTree = "<group>";
+		};
+		85594F22242BF6A7009A5141 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		85594F23242BF6B9009A5141 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		85594F28242C027F009A5141 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				85594F29242C0295009A5141 /* UseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BAD7F949B6F33CA77D8F721E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */,
+				2036D21F84E53931ACFC3953 /* Pods_WainNakel_WainNakelUITests.framework */,
+				1A8C1202D44AA2845582968F /* Pods_WainNakelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85594F11242BF43B009A5141 /* Build configuration list for PBXNativeTarget "WainNakel" */;
 			buildPhases = (
+				17CE039CD7246A636EC148DD /* [CP] Check Pods Manifest.lock */,
 				85594EE3242BF439009A5141 /* Sources */,
 				85594EE4242BF439009A5141 /* Frameworks */,
 				85594EE5242BF439009A5141 /* Resources */,
+				0A013C013DB2C41FA8E15E1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85594F14242BF43B009A5141 /* Build configuration list for PBXNativeTarget "WainNakelTests" */;
 			buildPhases = (
+				3929DFAF3453866B60348FC7 /* [CP] Check Pods Manifest.lock */,
 				85594EF9242BF43B009A5141 /* Sources */,
 				85594EFA242BF43B009A5141 /* Frameworks */,
 				85594EFB242BF43B009A5141 /* Resources */,
@@ -170,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85594F17242BF43B009A5141 /* Build configuration list for PBXNativeTarget "WainNakelUITests" */;
 			buildPhases = (
+				9636CAD7A3DF203B5405EF50 /* [CP] Check Pods Manifest.lock */,
 				85594F04242BF43B009A5141 /* Sources */,
 				85594F05242BF43B009A5141 /* Frameworks */,
 				85594F06242BF43B009A5141 /* Resources */,
+				22BB95353916C468A526DD99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,13 +393,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A013C013DB2C41FA8E15E1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WainNakel/Pods-WainNakel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WainNakel/Pods-WainNakel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WainNakel/Pods-WainNakel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17CE039CD7246A636EC148DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WainNakel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22BB95353916C468A526DD99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3929DFAF3453866B60348FC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WainNakelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9636CAD7A3DF203B5405EF50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WainNakel-WainNakelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85594EE3242BF439009A5141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
 				85594EEF242BF439009A5141 /* ViewController.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
+				85594F25242BF826009A5141 /* Resturant.swift in Sources */,
 				85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,10 +676,12 @@
 		};
 		85594F12242BF43B009A5141 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E453A8EF87BAC360D7EF02 /* Pods-WainNakel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WainNakel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,10 +695,12 @@
 		};
 		85594F13242BF43B009A5141 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D6F09DA658D4E2C7189928A /* Pods-WainNakel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WainNakel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +714,7 @@
 		};
 		85594F15242BF43B009A5141 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 255590A49A6179963294E692 /* Pods-WainNakelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +736,7 @@
 		};
 		85594F16242BF43B009A5141 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +758,7 @@
 		};
 		85594F18242BF43B009A5141 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F8E4F69DCBF85E067416B7 /* Pods-WainNakel-WainNakelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +778,7 @@
 		};
 		85594F19242BF43B009A5141 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE8D4C690CB4FFC5BF3A147 /* Pods-WainNakel-WainNakelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
