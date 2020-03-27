@@ -7,6 +7,9 @@ target 'WainNakel' do
 
   # Pods for WainNakel
   pod 'Moya', '~> 14.0'
+  pod 'Swinject', '~> 2.6'
+  pod 'SwinjectStoryboard', '~> 2.2'
+  
 
   target 'WainNakelTests' do
     inherit! :search_paths

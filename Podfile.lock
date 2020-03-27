@@ -4,19 +4,28 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Swinject (2.7.1)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
   - Moya (~> 14.0)
+  - Swinject (~> 2.6)
+  - SwinjectStoryboard (~> 2.2)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
+    - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 6817e3ce532d381fbb0b6fc6cb2300809155b3ba
+PODFILE CHECKSUM: 09257e18c63fefa0b143e288678562d350ac561e
 
 COCOAPODS: 1.9.0
