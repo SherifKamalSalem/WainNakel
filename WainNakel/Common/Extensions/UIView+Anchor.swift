@@ -8,13 +8,14 @@
 
 import UIKit
 
-extension UIColor {
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
-        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
-    }
-}
-
 extension UIView {
+    func gradient() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.mainLightColor.cgColor, UIColor.mainDarkColor.cgColor]
+        gradient.frame = self.bounds
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
     @discardableResult
     func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) -> AnchoredConstraints {
         

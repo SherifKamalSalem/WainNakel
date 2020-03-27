@@ -8,10 +8,22 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: BaseController {
 
+    let viewModel: SplashViewModel
+    let viewModelFactory: SplashViewModelFactory
+    
+    init(viewModelFactory: SplashViewModelFactory) {
+        self.viewModelFactory = viewModelFactory
+        self.viewModel = viewModelFactory.makeSplashViewModel()
+        super.init()
+    }
+    
+    public override func loadView() {
+      self.view = SplashView(viewModel: viewModel)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 }

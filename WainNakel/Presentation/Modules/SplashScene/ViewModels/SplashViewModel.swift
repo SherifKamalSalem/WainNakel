@@ -8,6 +8,32 @@
 
 import Foundation
 
-class SplashViewModel {
+enum SplashViewModelRoute {
+    case launch
+}
+
+enum SplashViewModelLoading {
+    case none
+    case fullScreen
+    case nextPage
+}
+
+protocol SplashViewModelInput {
+    func viewDidLoad()
+}
+
+protocol SplashViewModelOutput {
+    var route: Observable<MainViewModelRoute> { get }
+    var error: Observable<String> { get }
+}
+
+protocol SplashViewModel: SplashViewModelInput, SplashViewModelOutput { }
+
+class DefaultSplashViewModel: SplashViewModel {
+    let route: Observable<MainViewModelRoute> = Observable(.launching)
+    let error: Observable<String> = Observable("")
     
+    init() { }
+    
+    func viewDidLoad() { }
 }
