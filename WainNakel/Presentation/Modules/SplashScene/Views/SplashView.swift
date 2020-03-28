@@ -10,11 +10,8 @@ import UIKit
 import SnapKit
 
 class SplashView: BaseView {
-    let viewModel: SplashViewModel
     
-    init(frame: CGRect = .zero,
-         viewModel: SplashViewModel) {
-        self.viewModel = viewModel
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
     }
     
@@ -64,7 +61,6 @@ class SplashView: BaseView {
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
-        self.gradient()
         constructHierarchy()
         activateConstraints()
         animateConstraints()

@@ -11,109 +11,57 @@ import UIKit
 extension UIView {
     func gradient() {
         let gradient = CAGradientLayer()
+        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradient.endPoint = CGPoint(x: 0.5, y: 0.6)
         gradient.colors = [UIColor.mainLightColor.cgColor, UIColor.mainDarkColor.cgColor]
         gradient.frame = self.bounds
         self.layer.insertSublayer(gradient, at: 0)
     }
     
-    @discardableResult
-    func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) -> AnchoredConstraints {
+    enum UIViewFadeStyle {
+        case bottom
+        case top
+        case left
+        case right
         
-        translatesAutoresizingMaskIntoConstraints = false
-        var anchoredConstraints = AnchoredConstraints()
-        
-        if let top = top {
-            anchoredConstraints.top = topAnchor.constraint(equalTo: top, constant: padding.top)
-        }
-        
-        if let leading = leading {
-            anchoredConstraints.leading = leadingAnchor.constraint(equalTo: leading, constant: padding.left)
-        }
-        
-        if let bottom = bottom {
-            anchoredConstraints.bottom = bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom)
-        }
-        
-        if let trailing = trailing {
-            anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: trailing, constant: -padding.right)
-        }
-        
-        if size.width != 0 {
-            anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width)
-        }
-        
-        if size.height != 0 {
-            anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height)
-        }
-        
-        [anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach{ $0?.isActive = true }
-        
-        return anchoredConstraints
+        case vertical
+        case horizontal
     }
     
-    func fillSuperview(padding: UIEdgeInsets = .zero) {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superviewTopAnchor = superview?.topAnchor {
-            topAnchor.constraint(equalTo: superviewTopAnchor, constant: padding.top).isActive = true
+    func fadeView(style: UIViewFadeStyle = .bottom, percentage: Double = 0.07) {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [UIColor.mainLightColor.cgColor, UIColor.mainDarkColor.cgColor]
+        
+        let startLocation = percentage
+        let endLocation = 1 - percentage
+        
+        switch style {
+        case .bottom:
+            gradient.startPoint = CGPoint(x: 0.5, y: endLocation)
+            gradient.endPoint = CGPoint(x: 0.5, y: 1)
+        case .top:
+            gradient.startPoint = CGPoint(x: 0.5, y: startLocation)
+            gradient.endPoint = CGPoint(x: 0.5, y: 0.0)
+        case .vertical:
+            gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+            gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+            gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+            gradient.locations = [0.0, startLocation, endLocation, 1.0] as [NSNumber]
+            
+        case .left:
+            gradient.startPoint = CGPoint(x: startLocation, y: 0.5)
+            gradient.endPoint = CGPoint(x: 0.0, y: 0.5)
+        case .right:
+            gradient.startPoint = CGPoint(x: endLocation, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        case .horizontal:
+            gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+            gradient.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+            gradient.locations = [0.0, startLocation, endLocation, 1.0] as [NSNumber]
         }
         
-        if let superviewBottomAnchor = superview?.bottomAnchor {
-            bottomAnchor.constraint(equalTo: superviewBottomAnchor, constant: -padding.bottom).isActive = true
-        }
-        
-        if let superviewLeadingAnchor = superview?.leadingAnchor {
-            leadingAnchor.constraint(equalTo: superviewLeadingAnchor, constant: padding.left).isActive = true
-        }
-        
-        if let superviewTrailingAnchor = superview?.trailingAnchor {
-            trailingAnchor.constraint(equalTo: superviewTrailingAnchor, constant: -padding.right).isActive = true
-        }
+        layer.mask = gradient
     }
-    
-    func centerInSuperview(size: CGSize = .zero, constant: CGFloat = 0.0) {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superviewCenterXAnchor = superview?.centerXAnchor {
-            centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
-        }
-        
-        if let superviewCenterYAnchor = superview?.centerYAnchor {
-            centerYAnchor.constraint(equalTo: superviewCenterYAnchor, constant: constant).isActive = true
-        }
-        
-        if size.width != 0 {
-            widthAnchor.constraint(equalToConstant: size.width).isActive = true
-        }
-        
-        if size.height != 0 {
-            heightAnchor.constraint(equalToConstant: size.height).isActive = true
-        }
-    }
-    
-    func centerXInSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superViewCenterXAnchor = superview?.centerXAnchor {
-            centerXAnchor.constraint(equalTo: superViewCenterXAnchor).isActive = true
-        }
-    }
-    
-    func centerYInSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let centerY = superview?.centerYAnchor {
-            centerYAnchor.constraint(equalTo: centerY).isActive = true
-        }
-    }
-    
-    func constrainWidth(constant: CGFloat) {
-        translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: constant).isActive = true
-    }
-    
-    func constrainHeight(constant: CGFloat) {
-        translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: constant).isActive = true
-    }
-}
-
-struct AnchoredConstraints {
-    var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
 }

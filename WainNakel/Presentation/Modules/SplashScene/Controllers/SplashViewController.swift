@@ -20,7 +20,7 @@ class SplashViewController: BaseController {
     }
     
     public override func loadView() {
-      self.view = SplashView(viewModel: viewModel)
+      self.view = SplashView()
     }
     
     override func viewDidLoad() {

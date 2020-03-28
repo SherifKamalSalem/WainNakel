@@ -24,8 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func initUI(scene: UIWindowScene) {
         window = UIWindow(windowScene: scene)
-        let splashViewController: SplashViewController = appDIContainer.makeSplashDIContainer().makeSplashViewController()
-        window?.rootViewController = UINavigationController(rootViewController: splashViewController)
+//        let splashViewController: SplashViewController = appDIContainer.makeSplashDIContainer().makeSplashViewController()
+//
+        let suggestionViewController: SuggestionViewController = appDIContainer.makeSuggestionDIContainer().makeSuggestViewController()
+        window?.rootViewController = UINavigationController(rootViewController: suggestionViewController)
         window?.makeKeyAndVisible()
     }
 }

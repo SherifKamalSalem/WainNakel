@@ -10,6 +10,8 @@
 		19CDEF4255DEB9EA5F04C5E6 /* Pods_WainNakel_WainNakelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2036D21F84E53931ACFC3953 /* Pods_WainNakel_WainNakelUITests.framework */; };
 		690151661707D9537B93E3BD /* Pods_WainNakelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8C1202D44AA2845582968F /* Pods_WainNakelTests.framework */; };
 		740EB986C5F4F693942591DC /* Pods_WainNakel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */; };
+		8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */; };
+		8530FF5B242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
 		85594EF2242BF439009A5141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF0242BF439009A5141 /* Main.storyboard */; };
@@ -31,7 +33,6 @@
 		85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */; };
 		85594F46242C255E009A5141 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F45242C255E009A5141 /* SplashViewModel.swift */; };
 		85594F48242C2575009A5141 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F47242C2575009A5141 /* SplashViewController.swift */; };
-		855A0602242E15D1007608AB /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0601242E15D1007608AB /* UIView+Anchor.swift */; };
 		855A0606242E17AE007608AB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0605242E17AE007608AB /* SplashView.swift */; };
 		855A0608242E186E007608AB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0607242E186E007608AB /* BaseView.swift */; };
 		855A060A242E18DA007608AB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0609242E18DA007608AB /* BaseController.swift */; };
@@ -43,7 +44,7 @@
 		855A0624242E59AC007608AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0623242E59AC007608AB /* MainView.swift */; };
 		855A0626242E5F25007608AB /* SplashViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */; };
 		855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */; };
-		855A062D242E710B007608AB /* WainNakelSplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062C242E710A007608AB /* WainNakelSplashDependencyContainer.swift */; };
+		855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */; };
 		85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B35158242EC4F900075E62 /* SuggestionViewController.swift */; };
 		85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515A242EC50900075E62 /* SuggestionView.swift */; };
 		85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */; };
@@ -77,6 +78,8 @@
 		5D6F09DA658D4E2C7189928A /* Pods-WainNakel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel.release.xcconfig"; path = "Target Support Files/Pods-WainNakel/Pods-WainNakel.release.xcconfig"; sourceTree = "<group>"; };
 		5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakelTests.release.xcconfig"; path = "Target Support Files/Pods-WainNakelTests/Pods-WainNakelTests.release.xcconfig"; sourceTree = "<group>"; };
 		68F8E4F69DCBF85E067416B7 /* Pods-WainNakel-WainNakelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel-WainNakelUITests.debug.xcconfig"; path = "Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WainNakelSplashDependencyContainer.swift; sourceTree = "<group>"; };
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85594EEC242BF439009A5141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +107,6 @@
 		85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSuggestResturantRepository.swift; sourceTree = "<group>"; };
 		85594F45242C255E009A5141 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		85594F47242C2575009A5141 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		855A0601242E15D1007608AB /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		855A0605242E17AE007608AB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		855A0607242E186E007608AB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		855A0609242E18DA007608AB /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 		855A0623242E59AC007608AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerFactory.swift; sourceTree = "<group>"; };
 		855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelAppDependencyContainer.swift; sourceTree = "<group>"; };
-		855A062C242E710A007608AB /* WainNakelSplashDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelSplashDependencyContainer.swift; sourceTree = "<group>"; };
+		855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelSuggestionDependencyContainer.swift; sourceTree = "<group>"; };
 		85B35158242EC4F900075E62 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		85B3515A242EC50900075E62 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
@@ -379,8 +381,8 @@
 		855A0600242E15BB007608AB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				855A0601242E15D1007608AB /* UIView+Anchor.swift */,
 				855A060E242E2BA3007608AB /* UIColor+AppColors.swift */,
+				8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -476,7 +478,8 @@
 				85594EEA242BF439009A5141 /* AppDelegate.swift */,
 				85594EEC242BF439009A5141 /* SceneDelegate.swift */,
 				855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */,
-				855A062C242E710A007608AB /* WainNakelSplashDependencyContainer.swift */,
+				8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */,
+				855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -793,7 +796,7 @@
 				855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */,
 				85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */,
 				855A0606242E17AE007608AB /* SplashView.swift in Sources */,
-				855A0602242E15D1007608AB /* UIView+Anchor.swift in Sources */,
+				8530FF5B242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift in Sources */,
 				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
 				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,
 				855A061E242E56B9007608AB /* MainViewModel.swift in Sources */,
@@ -801,7 +804,7 @@
 				85594F48242C2575009A5141 /* SplashViewController.swift in Sources */,
 				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
 				85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */,
-				855A062D242E710B007608AB /* WainNakelSplashDependencyContainer.swift in Sources */,
+				855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
 				855A060D242E1967007608AB /* SplashViewModelFactory.swift in Sources */,
 				855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */,
@@ -820,6 +823,7 @@
 				855A0624242E59AC007608AB /* MainView.swift in Sources */,
 				855A0620242E56D3007608AB /* MainViewController.swift in Sources */,
 				855A060A242E18DA007608AB /* BaseController.swift in Sources */,
+				8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */,
 				85594F35242C0E1A009A5141 /* Constants.swift in Sources */,
 				85B35162242EC6D000075E62 /* SuggestionViewControllerFactory.swift in Sources */,
 			);
