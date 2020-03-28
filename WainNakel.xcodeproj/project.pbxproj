@@ -12,7 +12,6 @@
 		740EB986C5F4F693942591DC /* Pods_WainNakel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
-		85594EEF242BF439009A5141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEE242BF439009A5141 /* ViewController.swift */; };
 		85594EF2242BF439009A5141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF0242BF439009A5141 /* Main.storyboard */; };
 		85594EF4242BF43B009A5141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF3242BF43B009A5141 /* Assets.xcassets */; };
 		85594EF7242BF43B009A5141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF5242BF43B009A5141 /* LaunchScreen.storyboard */; };
@@ -45,6 +44,11 @@
 		855A0626242E5F25007608AB /* SplashViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */; };
 		855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */; };
 		855A062D242E710B007608AB /* WainNakelSplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062C242E710A007608AB /* WainNakelSplashDependencyContainer.swift */; };
+		85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B35158242EC4F900075E62 /* SuggestionViewController.swift */; };
+		85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515A242EC50900075E62 /* SuggestionView.swift */; };
+		85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */; };
+		85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515F242EC66400075E62 /* SuggestionViewModelFactory.swift */; };
+		85B35162242EC6D000075E62 /* SuggestionViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B35161242EC6D000075E62 /* SuggestionViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +80,6 @@
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85594EEC242BF439009A5141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85594EEE242BF439009A5141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85594EF1242BF439009A5141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85594EF3242BF43B009A5141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85594EF6242BF43B009A5141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +117,11 @@
 		855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerFactory.swift; sourceTree = "<group>"; };
 		855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelAppDependencyContainer.swift; sourceTree = "<group>"; };
 		855A062C242E710A007608AB /* WainNakelSplashDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelSplashDependencyContainer.swift; sourceTree = "<group>"; };
+		85B35158242EC4F900075E62 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		85B3515A242EC50900075E62 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
+		85B3515F242EC66400075E62 /* SuggestionViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModelFactory.swift; sourceTree = "<group>"; };
+		85B35161242EC6D000075E62 /* SuggestionViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewControllerFactory.swift; sourceTree = "<group>"; };
 		D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WainNakel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -189,7 +197,6 @@
 				85594F1C242BF4D6009A5141 /* Data */,
 				85594F1B242BF4CA009A5141 /* Domain */,
 				85594F1A242BF4C1009A5141 /* Presentation */,
-				85594EEE242BF439009A5141 /* ViewController.swift */,
 				85594EF0242BF439009A5141 /* Main.storyboard */,
 				85594EF3242BF43B009A5141 /* Assets.xcassets */,
 				85594EF5242BF43B009A5141 /* LaunchScreen.storyboard */,
@@ -356,6 +363,7 @@
 				855A0619242E5684007608AB /* Main */,
 				855A0612242E3E33007608AB /* Base */,
 				85594F21242BF661009A5141 /* SplashScene */,
+				85B35154242EC45200075E62 /* SuggestionsScene */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -485,6 +493,50 @@
 			children = (
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		85B35154242EC45200075E62 /* SuggestionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				85B3515E242EC64B00075E62 /* Factory */,
+				85B35157242EC49200075E62 /* ViewModels */,
+				85B35156242EC48B00075E62 /* Views */,
+				85B35155242EC47F00075E62 /* Controllers */,
+			);
+			path = SuggestionsScene;
+			sourceTree = "<group>";
+		};
+		85B35155242EC47F00075E62 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85B35158242EC4F900075E62 /* SuggestionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85B35156242EC48B00075E62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85B3515A242EC50900075E62 /* SuggestionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85B35157242EC49200075E62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85B3515E242EC64B00075E62 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				85B3515F242EC66400075E62 /* SuggestionViewModelFactory.swift */,
+				85B35161242EC6D000075E62 /* SuggestionViewControllerFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		BAD7F949B6F33CA77D8F721E /* Frameworks */ = {
@@ -737,20 +789,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				85594F2E242C044F009A5141 /* SuggestResturantUseCase.swift in Sources */,
+				85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */,
 				855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */,
+				85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */,
 				855A0606242E17AE007608AB /* SplashView.swift in Sources */,
 				855A0602242E15D1007608AB /* UIView+Anchor.swift in Sources */,
 				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
 				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,
 				855A061E242E56B9007608AB /* MainViewModel.swift in Sources */,
+				85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */,
 				85594F48242C2575009A5141 /* SplashViewController.swift in Sources */,
 				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
 				85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */,
 				855A062D242E710B007608AB /* WainNakelSplashDependencyContainer.swift in Sources */,
-				85594EEF242BF439009A5141 /* ViewController.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
 				855A060D242E1967007608AB /* SplashViewModelFactory.swift in Sources */,
 				855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */,
+				85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */,
 				85594F46242C255E009A5141 /* SplashViewModel.swift in Sources */,
 				85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */,
 				85594F37242C1044009A5141 /* Networking.swift in Sources */,
@@ -766,6 +821,7 @@
 				855A0620242E56D3007608AB /* MainViewController.swift in Sources */,
 				855A060A242E18DA007608AB /* BaseController.swift in Sources */,
 				85594F35242C0E1A009A5141 /* Constants.swift in Sources */,
+				85B35162242EC6D000075E62 /* SuggestionViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

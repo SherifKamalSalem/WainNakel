@@ -7,6 +7,7 @@ target 'WainNakel' do
 
   # Pods for WainNakel
   pod 'Moya', '~> 14.0'
+  pod 'SnapKit', '~> 5.0.0'
   
   target 'WainNakelTests' do
     inherit! :search_paths

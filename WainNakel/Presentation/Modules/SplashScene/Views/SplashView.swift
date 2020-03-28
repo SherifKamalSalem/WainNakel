@@ -7,24 +7,33 @@
 //
 
 import UIKit
+import SnapKit
 
 class SplashView: BaseView {
     let viewModel: SplashViewModel
     
     init(frame: CGRect = .zero,
          viewModel: SplashViewModel) {
-      self.viewModel = viewModel
-      super.init(frame: frame)
+        self.viewModel = viewModel
+        super.init(frame: frame)
     }
     
     let suggestButton: UIButton = {
         let button = UIButton(type: .custom)
-          button.setTitle("", for: .disabled)
+        button.backgroundColor = UIColor.white
+        button.setTitle("", for: .disabled)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = .boldSystemFont(ofSize: 18)
-        button.titleLabel?.textColor = UIColor.mainDarkColor
+        button.setTitleColor(UIColor.mainDarkColor, for: .normal)
         button.setTitle(Constants.UI.SuggestButtonTitle, for: .normal)
+        return button
+    }()
+    
+    let settingsButton: UIButton = {
+        let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 5
+        button.setImage(#imageLiteral(resourceName: "settingsIcon"), for: .normal)
         return button
     }()
     
@@ -37,39 +46,90 @@ class SplashView: BaseView {
         return label
     }()
     
-    let resturantIcon: UIView = {
-      let imageView = UIImageView()
-      imageView.heightAnchor
-        .constraint(equalToConstant: 70)
-        .isActive = true
-      imageView.widthAnchor
-        .constraint(equalToConstant: 70)
-        .isActive = true
-      imageView.image = #imageLiteral(resourceName: "splashIcon")
-      imageView.contentMode = .center
-      return imageView
+    let resturantIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = #imageLiteral(resourceName: "splashIcon")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
-    lazy var mainStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [resturantIcon, wainNakelLabel, suggestButton])
-        stack.axis = .vertical
-        stack.spacing = 20
-        stack.alignment = .fill
-        return stack
-    }()
+    var wainNakelLblBottomConstraintToSV: Constraint?
+    var suggestBtnRightContraintToSV: Constraint?
+    var suggestBtnBottomConstraintToSV: Constraint?
+    var suggestBtnBottmContraintToLbl: Constraint?
+    var settingsBtnBottomConstraintToSV: Constraint?
+    var settingsBtnBottmContraintToLbl: Constraint?
+    var settingsBtnLeftContraintToSV: Constraint?
+    var settingsBtnRightContraintToSuggestBtn: Constraint?
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
         self.gradient()
         constructHierarchy()
         activateConstraints()
+        animateConstraints()
     }
     
     func constructHierarchy() {
-        addSubview(mainStack)
+        addSubview(resturantIcon)
+        addSubview(wainNakelLabel)
+        addSubview(suggestButton)
+        addSubview(settingsButton)
     }
     
     func activateConstraints() {
-        mainStack.centerInSuperview(size: .init(width: 200, height: 200))
+        resturantIcon.snp.makeConstraints { make in
+            make.center.equalTo(self)
+            make.size.equalTo(70)
+        }
+        
+        wainNakelLabel.snp.makeConstraints { make in
+            self.wainNakelLblBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
+            make.centerX.equalTo(self)
+        }
+        
+        suggestButton.snp.makeConstraints { make in
+            self.suggestBtnRightContraintToSV = make.trailing.equalTo(self).offset(50).constraint
+            self.suggestBtnBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
+            self.suggestBtnBottmContraintToLbl = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
+            self.suggestBtnBottmContraintToLbl?.deactivate()
+        }
+        
+        settingsButton.snp.makeConstraints { make in
+            self.settingsBtnLeftContraintToSV = make.leading.equalTo(self).offset(-50).constraint
+            self.settingsBtnBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
+            self.settingsBtnBottmContraintToLbl = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
+            self.settingsBtnBottmContraintToLbl?.deactivate()
+        }
+        self.layoutIfNeeded()
+    }
+    
+    func animateConstraints() {
+        wainNakelLabel.snp.makeConstraints { make in
+            self.wainNakelLblBottomConstraintToSV?.deactivate()
+            make.top.equalTo(resturantIcon.snp.bottom).offset(40)
+        }
+          
+        suggestButton.snp.makeConstraints { make in
+            self.suggestBtnBottomConstraintToSV?.deactivate()
+            self.suggestBtnRightContraintToSV?.deactivate()
+            self.suggestBtnBottmContraintToLbl?.activate()
+            make.trailing.equalTo(self).offset(-75)
+            make.width.equalTo(self).multipliedBy(0.5)
+            make.height.equalTo(50)
+        }
+        
+        settingsButton.snp.makeConstraints { make in
+            self.settingsBtnBottomConstraintToSV?.deactivate()
+            self.settingsBtnLeftContraintToSV?.deactivate()
+            self.settingsBtnBottmContraintToLbl?.activate()
+            make.leading.equalTo(self).offset(75)
+            make.width.equalTo(50)
+            make.height.equalTo(50)
+        }
+        
+        UIView.animate(withDuration: 2.0) {
+            self.layoutIfNeeded()
+        }
     }
 }
