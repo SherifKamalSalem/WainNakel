@@ -45,10 +45,9 @@
 		855A0626242E5F25007608AB /* SplashViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */; };
 		855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */; };
 		855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */; };
-		8572D5EC243262E4006415BC /* UserCurrentLocationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5EB243262E4006415BC /* UserCurrentLocationUseCase.swift */; };
-		8572D5EE243263C5006415BC /* UsersCurrentLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5ED243263C5006415BC /* UsersCurrentLocationRepository.swift */; };
-		8572D5F02432643F006415BC /* DefaultUserCurrentLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5EF2432643F006415BC /* DefaultUserCurrentLocationRepository.swift */; };
 		8572D5F224326861006415BC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5F124326861006415BC /* UIViewController+Alert.swift */; };
+		8572D5F424329FED006415BC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8572D5F324329FEC006415BC /* README.md */; };
+		8572D5F82432BA61006415BC /* Resturant+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5F72432BA61006415BC /* Resturant+Codable.swift */; };
 		85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B35158242EC4F900075E62 /* SuggestionViewController.swift */; };
 		85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515A242EC50900075E62 /* SuggestionView.swift */; };
 		85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */; };
@@ -123,10 +122,9 @@
 		855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerFactory.swift; sourceTree = "<group>"; };
 		855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelAppDependencyContainer.swift; sourceTree = "<group>"; };
 		855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelSuggestionDependencyContainer.swift; sourceTree = "<group>"; };
-		8572D5EB243262E4006415BC /* UserCurrentLocationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCurrentLocationUseCase.swift; sourceTree = "<group>"; };
-		8572D5ED243263C5006415BC /* UsersCurrentLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCurrentLocationRepository.swift; sourceTree = "<group>"; };
-		8572D5EF2432643F006415BC /* DefaultUserCurrentLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserCurrentLocationRepository.swift; sourceTree = "<group>"; };
 		8572D5F124326861006415BC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		8572D5F324329FEC006415BC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8572D5F72432BA61006415BC /* Resturant+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resturant+Codable.swift"; sourceTree = "<group>"; };
 		85B35158242EC4F900075E62 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		85B3515A242EC50900075E62 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +177,7 @@
 		85594EDE242BF439009A5141 = {
 			isa = PBXGroup;
 			children = (
+				8572D5F324329FEC006415BC /* README.md */,
 				85594EE9242BF439009A5141 /* WainNakel */,
 				85594F00242BF43B009A5141 /* WainNakelTests */,
 				85594F0B242BF43B009A5141 /* WainNakelUITests */,
@@ -255,8 +254,7 @@
 		85594F1C242BF4D6009A5141 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8572CEE8242D850E0011ECB6 /* DI */,
-				85594F23242BF6B9009A5141 /* Network */,
+				8572D5F72432BA61006415BC /* Resturant+Codable.swift */,
 				85594F22242BF6A7009A5141 /* Repositories */,
 			);
 			path = Data;
@@ -275,7 +273,6 @@
 			children = (
 				85594F28242C027F009A5141 /* Protocol */,
 				85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */,
-				8572D5EB243262E4006415BC /* UserCurrentLocationUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */,
-				8572D5ED243263C5006415BC /* UsersCurrentLocationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -312,16 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */,
-				8572D5EF2432643F006415BC /* DefaultUserCurrentLocationRepository.swift */,
 			);
 			path = Repositories;
-			sourceTree = "<group>";
-		};
-		85594F23242BF6B9009A5141 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		85594F28242C027F009A5141 /* Protocol */ = {
@@ -503,13 +491,6 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		8572CEE8242D850E0011ECB6 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
 		85B35154242EC45200075E62 /* SuggestionsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +656,7 @@
 			files = (
 				85594EF7242BF43B009A5141 /* LaunchScreen.storyboard in Resources */,
 				85594EF4242BF43B009A5141 /* Assets.xcassets in Resources */,
+				8572D5F424329FED006415BC /* README.md in Resources */,
 				85594EF2242BF439009A5141 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,15 +802,13 @@
 				855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
 				855A060D242E1967007608AB /* SplashViewModelFactory.swift in Sources */,
-				8572D5EE243263C5006415BC /* UsersCurrentLocationRepository.swift in Sources */,
 				855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */,
 				85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */,
-				8572D5F02432643F006415BC /* DefaultUserCurrentLocationRepository.swift in Sources */,
 				85594F46242C255E009A5141 /* SplashViewModel.swift in Sources */,
 				85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */,
 				85594F37242C1044009A5141 /* Networking.swift in Sources */,
 				85594F25242BF826009A5141 /* Resturant.swift in Sources */,
-				8572D5EC243262E4006415BC /* UserCurrentLocationUseCase.swift in Sources */,
+				8572D5F82432BA61006415BC /* Resturant+Codable.swift in Sources */,
 				85594F39242C1505009A5141 /* Reachability.swift in Sources */,
 				85594F32242C0720009A5141 /* API.swift in Sources */,
 				855A0608242E186E007608AB /* BaseView.swift in Sources */,

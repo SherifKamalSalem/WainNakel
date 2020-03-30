@@ -50,6 +50,7 @@ extension BaseAPI: TargetType {
         switch self {
         case .getRandomResturant(let UID):
             params[Constants.API.UID] = UID
+            params[Constants.API.GET_PARAM] = "value"
         }
         return params
     }

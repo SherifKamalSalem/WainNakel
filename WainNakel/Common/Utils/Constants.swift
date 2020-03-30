@@ -20,6 +20,7 @@ struct Constants {
     struct API {
         static let BASE_URL = "https://wainnakel.com/api/v1/"
         static let PATH = "GenerateFS.php"
-        static let UID = "UID"
+        static let UID = "uid"
+        static let GET_PARAM = "get_param"
     }
 }

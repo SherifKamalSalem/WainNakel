@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum SuggestionViewModelRoute {
     case launch
@@ -26,26 +27,43 @@ protocol SuggestionViewModelOutput {
     var route: Observable<MainViewModelRoute> { get }
     var data: Observable<Resturant?> { get }
     var error: Observable<String> { get }
+    var currentLocation: Observable<CLLocation?> { get }
+    func suggestResturant()
 }
 
 protocol SuggestionViewModel: SuggestionViewModelInput, SuggestionViewModelOutput { }
 
-class DefaultSuggestionViewModel: SuggestionViewModel {
+class DefaultSuggestionViewModel: NSObject, SuggestionViewModel {
+    
     let route: Observable<MainViewModelRoute> = Observable(.launching)
+    var currentLocation = Observable<CLLocation?>(nil)
     let error: Observable<String> = Observable("")
     let data: Observable<Resturant?> = Observable(nil)
     private let suggestResturantUseCase: SuggestResturantUseCase
-    private let userCurrentLocationUseCase: UserCurrentLocationUseCase
+    var locationManager: CLLocationManager!
     
-    init(userCurrentLocationUseCase: UserCurrentLocationUseCase, suggestResturantUseCase: SuggestResturantUseCase) {
+    init(suggestResturantUseCase: SuggestResturantUseCase) {
         self.suggestResturantUseCase = suggestResturantUseCase
-        self.userCurrentLocationUseCase = userCurrentLocationUseCase
+        super.init()
+        if locationManager == nil {
+            locationManager = CLLocationManager()
+        }
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager?.startUpdatingLocation()
+        }
     }
     
+    ///Selector action handler for press suggestion button which first check location manager service is enabled then get current location after this fetch random resturant and feed data observable with resturant
     @objc
-    public func requestRandomResturant() {
-        guard let currentLocation = userCurrentLocationUseCase.getUserCurrentLocation() else { return }
-        
+    public func suggestResturant() {
+        guard let coordinate = currentLocation.value?.coordinate else {
+            return
+        }
+        let UID = String(describing: "\(coordinate.latitude),\(coordinate.longitude)")
+        fetchRandomResturant(UID: UID)
     }
     
     private func fetchRandomResturant(UID: String) {
@@ -61,5 +79,21 @@ class DefaultSuggestionViewModel: SuggestionViewModel {
     }
     
     func viewDidLoad() { }
-    
+}
+
+extension DefaultSuggestionViewModel: CLLocationManagerDelegate {
+    func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        currentLocation.value = location
+        if locationManager != nil {
+            locationManager?.stopUpdatingLocation()
+        }
+        locationManager = nil
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            manager.startUpdatingLocation()
+        }
+    }
 }

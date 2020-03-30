@@ -111,7 +111,7 @@ class SuggestionView: BaseView {
             status = .anotherOne
         case .anotherOne:
             if let viewModel = viewModel as? DefaultSuggestionViewModel {
-                viewModel.requestRandomResturant()
+                viewModel.suggestResturant()
             }
         }
     }
