@@ -12,7 +12,7 @@ import Moya
 typealias Callback<T: Decodable> = (T?, Error?) -> Void
 
 struct NetworkManager: Networking {
-    internal let provider = MoyaProvider<BaseAPI>(plugins: [NetworkLoggerPlugin(), CachePolicyPlugin()])
+    internal let provider = MoyaProvider<BaseAPI>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)), CachePolicyPlugin()])
     fileprivate var jsonDecoder = JSONDecoder()
 
     func getRandomResturant(UID: String, completion: @escaping Callback<Resturant>) {

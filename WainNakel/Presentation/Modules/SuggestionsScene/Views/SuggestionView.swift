@@ -11,8 +11,14 @@ import SnapKit
 import MapKit
 import NVActivityIndicatorView
 
+enum SuggestStatus {
+    case firstTime
+    case anotherOne
+}
+
 class SuggestionView: BaseView {
     let viewModel: SuggestionViewModel
+    var status: SuggestStatus = .firstTime
     
     init(frame: CGRect = .zero,
          viewModel: SuggestionViewModel) {
@@ -20,18 +26,25 @@ class SuggestionView: BaseView {
         super.init(frame: frame)
     }
     
+    //MARK: - wainNakel label Constraints
     var wainNakelLblBottomConstraintToSV: Constraint?
-    var suggestBtnRightToSVContraint: Constraint?
-    var suggestBtnBottomConstraintToSV: Constraint?
-    var suggestBtnBottmContraintToLbl: Constraint?
-    var settingsBtnBottomConstraintToSV: Constraint?
-    var settingsBtnBottmContraintToLbl: Constraint?
-    var settingsBtnLeftContraintToSV: Constraint?
-    var settingsBtnRightContraintToSuggestBtn: Constraint?
-    var suggestBtnWidthConstraint: Constraint?
-    var suggestBtnCenterToSVConstraint: Constraint?
+    //MARK: - Suggest Button Constraints
     var suggestBtnTrailingToSVConstraint: Constraint?
+    var suggestBtnBottomToSVConstraint: Constraint?
+    var suggestBtnBottmToLblContraint: Constraint?
+    var suggestBtnToSettingBtnConstraint: Constraint?
+    var suggestBtnWidthConstraint: Constraint?
+    var suggestBtnHeightConstraint: Constraint?
+    var suggestBtnCenterToSVConstraint: Constraint?
+    //MARK: - Settings Button Constraints
+    var settingsBtnBottomToSVConstraint: Constraint?
+    var settingsBtnBottmToLblContraint: Constraint?
+    var settingsBtnLeadingToSVContraint: Constraint?
+    var settingsBtnWidthConstraint: Constraint?
+    var settingsBtnHeightConstraint: Constraint?
+    var settingsBtnTosuggestBtnConstraint: Constraint?
     
+    //MARK: - Map View
     lazy var mapView: MKMapView = {
         let mapView = MKMapView(frame: self.bounds)
         mapView.mapType = MKMapType.standard
@@ -43,7 +56,7 @@ class SuggestionView: BaseView {
         mapView.isScrollEnabled = true
         return mapView
     }()
-    
+    //MARK: - Gradient View
     let gradientView: UIView = {
         return GradientView()
     }()
@@ -53,7 +66,7 @@ class SuggestionView: BaseView {
         view.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         return view
     }()
-    
+    //MARK: - Top View Container Stack
     lazy var topViewContainerStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [resturantNameLabel, mapTopViewBtnsStack])
         stack.axis = .vertical
@@ -61,7 +74,7 @@ class SuggestionView: BaseView {
         stack.spacing = 20
         return stack
     }()
-    
+    //MARK: - resturant Name Label
     let resturantNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.mainColor
@@ -70,7 +83,7 @@ class SuggestionView: BaseView {
         label.text = "Failed"
         return label
     }()
-    
+    //MARK: - Map Top View Buttons Stack
     let mapTopViewBtnsStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [UIImageView(image: #imageLiteral(resourceName: "map")), UIImageView(image: #imageLiteral(resourceName: "gallery")), UIImageView(image: #imageLiteral(resourceName: "favorite")), UIImageView(image: #imageLiteral(resourceName: "share"))])
         stack.axis = .horizontal
@@ -78,7 +91,7 @@ class SuggestionView: BaseView {
         stack.distribution = .equalCentering
         return stack
     }()
-    
+    //MARK: - Suggest Button
     let suggestButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.white
@@ -92,6 +105,18 @@ class SuggestionView: BaseView {
     }()
     
     @objc func suggestButtonTapped() {
+        switch status {
+        case .firstTime:
+            suggestButtonFirstTimeTapped()
+            status = .anotherOne
+        case .anotherOne:
+            if let viewModel = viewModel as? DefaultSuggestionViewModel {
+                viewModel.requestRandomResturant()
+            }
+        }
+    }
+    
+    func suggestButtonFirstTimeTapped() {
         suggestButton.addSubview(activityIndicatorView)
         suggestButton.setTitle("", for: .normal)
         activityIndicatorView.snp.makeConstraints { make in
@@ -163,24 +188,29 @@ class SuggestionView: BaseView {
             make.center.equalTo(self)
             make.size.equalTo(70)
         }
-        
         wainNakelLabel.snp.makeConstraints { make in
             self.wainNakelLblBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
             make.centerX.equalTo(self)
         }
-        
         suggestButton.snp.makeConstraints { make in
-            self.suggestBtnRightToSVContraint = make.trailing.equalTo(self).offset(50).constraint
-            self.suggestBtnBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
-            self.suggestBtnBottmContraintToLbl = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
-            self.suggestBtnBottmContraintToLbl?.deactivate()
+            self.suggestBtnTrailingToSVConstraint = make.trailing.equalTo(self).offset(50).constraint
+            self.suggestBtnBottomToSVConstraint = make.bottom.equalTo(self).offset(50).constraint
+            self.suggestBtnBottmToLblContraint = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
+            self.suggestBtnToSettingBtnConstraint = make.leading.equalTo(settingsButton.snp.trailing).offset(10).constraint
+            self.suggestBtnWidthConstraint = make.width.equalTo(0).constraint
+            self.suggestBtnHeightConstraint = make.height.equalTo(0).constraint
+            self.suggestBtnBottmToLblContraint?.deactivate()
+            self.suggestBtnToSettingBtnConstraint?.deactivate()
         }
         
         settingsButton.snp.makeConstraints { make in
-            self.settingsBtnLeftContraintToSV = make.leading.equalTo(self).offset(-50).constraint
-            self.settingsBtnBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
-            self.settingsBtnBottmContraintToLbl = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
-            self.settingsBtnBottmContraintToLbl?.deactivate()
+            self.settingsBtnLeadingToSVContraint = make.leading.equalTo(self).offset(-50).constraint
+            self.settingsBtnBottomToSVConstraint = make.bottom.equalTo(self).offset(50).constraint
+            self.settingsBtnBottmToLblContraint = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
+            self.settingsBtnWidthConstraint = make.width.equalTo(0).constraint
+            self.settingsBtnHeightConstraint = make.height.equalTo(0).constraint
+            self.settingsBtnBottmToLblContraint?.deactivate()
+            self.settingsBtnTosuggestBtnConstraint?.deactivate()
         }
         self.layoutIfNeeded()
     }
@@ -191,22 +221,23 @@ class SuggestionView: BaseView {
             make.top.equalTo(resturantIcon.snp.bottom).offset(40)
         }
           
-        suggestButton.snp.makeConstraints { make in
-            self.suggestBtnBottomConstraintToSV?.deactivate()
-            self.suggestBtnRightToSVContraint?.deactivate()
-            self.suggestBtnBottmContraintToLbl?.activate()
+        suggestButton.snp.updateConstraints { make in
+            self.suggestBtnWidthConstraint = make.width.equalTo(150).constraint
+            self.suggestBtnHeightConstraint = make.height.equalTo(50).constraint
             self.suggestBtnTrailingToSVConstraint = make.trailing.equalTo(self).offset(-75).constraint
-            self.suggestBtnWidthConstraint = make.width.equalTo(self).multipliedBy(0.5).constraint
-            make.height.equalTo(50)
+            self.suggestBtnBottmToLblContraint?.activate()
+            self.suggestBtnToSettingBtnConstraint?.deactivate()
+            self.suggestBtnBottomToSVConstraint?.deactivate()
         }
         
-        settingsButton.snp.makeConstraints { make in
-            self.settingsBtnBottomConstraintToSV?.deactivate()
-            self.settingsBtnLeftContraintToSV?.deactivate()
-            self.settingsBtnBottmContraintToLbl?.activate()
-            make.leading.equalTo(self).offset(75)
-            make.width.equalTo(50)
-            make.height.equalTo(50)
+        settingsButton.snp.updateConstraints { make in
+            self.settingsBtnWidthConstraint = make.width.equalTo(40).constraint
+            self.settingsBtnHeightConstraint = make.height.equalTo(50).constraint
+            self.settingsBtnLeadingToSVContraint = make.leading.equalTo(self).offset(75).constraint
+            self.settingsBtnBottmToLblContraint?.activate()
+            self.settingsBtnTosuggestBtnConstraint?.deactivate()
+            self.settingsBtnBottomToSVConstraint?.deactivate()
+            self.settingsBtnLeadingToSVContraint?.deactivate()
         }
         
         UIView.animate(withDuration: 2.0) {
@@ -236,10 +267,10 @@ class SuggestionView: BaseView {
         mapTopView.snp.makeConstraints { make in
             make.bottom.equalTo(self).multipliedBy(0.2)
         }
-        suggestBtnBottomConstraintToSV?.activate()
-        settingsBtnBottomConstraintToSV?.activate()
-        suggestBtnBottomConstraintToSV?.update(offset: -30)
-        settingsBtnBottomConstraintToSV?.update(offset: -30)
+        suggestBtnBottomToSVConstraint?.activate()
+        settingsBtnBottomToSVConstraint?.activate()
+        suggestBtnBottomToSVConstraint?.update(offset: -30)
+        settingsBtnBottomToSVConstraint?.update(offset: -30)
         settingsButton.isHidden = false
         suggestButton.backgroundColor = .mainColor
         suggestButton.setTitle("Suggest Another", for: .normal)

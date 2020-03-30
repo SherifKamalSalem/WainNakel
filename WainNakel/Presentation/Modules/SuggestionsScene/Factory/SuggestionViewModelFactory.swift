@@ -14,6 +14,6 @@ protocol SuggestionViewModelFactory {
 
 class DefaultSuggestionViewModelFactory: SuggestionViewModelFactory {
     func makeSuggestionViewModel() -> SuggestionViewModel {
-        return DefaultSuggestionViewModel()
+        return DefaultSuggestionViewModel(userCurrentLocationUseCase: DefaultUserCurrentLocationUseCase(repository: DefaultUserCurrentLocationRepository()), suggestResturantUseCase: DefaultSuggestResturantUseCase(suggestResturantRepository: DefaultSuggestResturantRepository(networkingService: NetworkManager())))
     }
 }

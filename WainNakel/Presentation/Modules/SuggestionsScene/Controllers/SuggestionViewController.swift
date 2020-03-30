@@ -27,5 +27,15 @@ class SuggestionViewController: BaseController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
+        setupViewModel()
+    }
+    
+    func setupViewModel() {
+        viewModel.data
+            .observe(on: self) { resturant in
+                if let view = self.view as? SuggestionView {
+                    view.resturantNameLabel.text = resturant?.name
+                }
+        }
     }
 }
