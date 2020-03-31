@@ -14,9 +14,6 @@ class WainNakelAppDIContainer {
         return NetworkManager()
     }
     
-    public func makeSplashDIContainer() -> WainNakelSplashDIContainer {
-      return WainNakelSplashDIContainer()
-    }
     
     public func makeSuggestionDIContainer() -> WainNakelSuggestionDIContainer {
       return WainNakelSuggestionDIContainer()

@@ -43,7 +43,10 @@ class SuggestionView: BaseView {
     var settingsBtnWidthConstraint: Constraint?
     var settingsBtnHeightConstraint: Constraint?
     var settingsBtnTosuggestBtnConstraint: Constraint?
-    
+    //MARK: - Top White View Constraints
+    var topWhiteViewHeightContraints: Constraint?
+    //MARK: - Top Blue View Constraints
+    var topBlueViewHeightContraints: Constraint?
     //MARK: - Map View
     lazy var mapView: MKMapView = {
         let mapView = MKMapView(frame: self.bounds)
@@ -60,15 +63,30 @@ class SuggestionView: BaseView {
     let gradientView: UIView = {
         return GradientView()
     }()
-    //MARK: - Top View
-    let mapTopView: UIView = {
+    //MARK: - Top White View
+    let TopWhiteView: UIView = {
         let view = UIView()
+        view.isHidden = true
         view.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         return view
     }()
-    //MARK: - Top View Container Stack
-    lazy var topViewContainerStack: UIStackView = {
+    //MARK: - Top Blue View
+    let TopBlueView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.mainColor.withAlphaComponent(0.7)
+        return view
+    }()
+    //MARK: - Top White View Container Stack
+    lazy var TopWhiteViewContainerStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [resturantNameLabel, mapTopViewBtnsStack])
+        stack.axis = .vertical
+        stack.distribution = .fill
+        stack.spacing = 20
+        return stack
+    }()
+    //MARK: - Top Blue View Container Stack
+    lazy var TopBlueViewContainerStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [refreshButton, menuButton])
         stack.axis = .vertical
         stack.distribution = .fill
         stack.spacing = 20
@@ -90,6 +108,24 @@ class SuggestionView: BaseView {
         stack.spacing = 30
         stack.distribution = .equalCentering
         return stack
+    }()
+    //MARK: - (Blue View) Refresh Button
+    let refreshButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.backgroundColor = UIColor.white
+        button.setTitle("", for: .disabled)
+        button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
+        button.layer.cornerRadius = button.frame.size.width / 2
+        return button
+    }()
+    
+    let menuButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.backgroundColor = UIColor.white
+        button.setTitle("", for: .disabled)
+        button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
+        button.layer.cornerRadius = button.frame.size.width / 2
+        return button
     }()
     //MARK: - Suggest Button
     let suggestButton: UIButton = {
@@ -143,7 +179,8 @@ class SuggestionView: BaseView {
             self.gradientView.removeFromSuperview()
             self.resturantIcon.removeFromSuperview()
             self.wainNakelLabel.removeFromSuperview()
-            self.wireTopView()
+            self.activateTopBlueViewContraints()
+            self.activateTopWhiteViewContraints()
         }
     }
     
@@ -183,105 +220,10 @@ class SuggestionView: BaseView {
         self.addSubview(settingsButton)
     }
     
-    func activateLaunchViewConstraints() {
-        resturantIcon.snp.makeConstraints { make in
-            make.center.equalTo(self)
-            make.size.equalTo(70)
-        }
-        wainNakelLabel.snp.makeConstraints { make in
-            self.wainNakelLblBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
-            make.centerX.equalTo(self)
-        }
-        suggestButton.snp.makeConstraints { make in
-            self.suggestBtnTrailingToSVConstraint = make.trailing.equalTo(self).offset(50).constraint
-            self.suggestBtnBottomToSVConstraint = make.bottom.equalTo(self).offset(50).constraint
-            self.suggestBtnBottmToLblContraint = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
-            self.suggestBtnToSettingBtnConstraint = make.leading.equalTo(settingsButton.snp.trailing).offset(10).constraint
-            self.suggestBtnWidthConstraint = make.width.equalTo(0).constraint
-            self.suggestBtnHeightConstraint = make.height.equalTo(0).constraint
-            self.suggestBtnBottmToLblContraint?.deactivate()
-            self.suggestBtnToSettingBtnConstraint?.deactivate()
-        }
-        
-        settingsButton.snp.makeConstraints { make in
-            self.settingsBtnLeadingToSVContraint = make.leading.equalTo(self).offset(-50).constraint
-            self.settingsBtnBottomToSVConstraint = make.bottom.equalTo(self).offset(50).constraint
-            self.settingsBtnBottmToLblContraint = make.top.equalTo(wainNakelLabel.snp.bottom).offset(40).constraint
-            self.settingsBtnWidthConstraint = make.width.equalTo(0).constraint
-            self.settingsBtnHeightConstraint = make.height.equalTo(0).constraint
-            self.settingsBtnBottmToLblContraint?.deactivate()
-            self.settingsBtnTosuggestBtnConstraint?.deactivate()
-        }
-        self.layoutIfNeeded()
-    }
-    
-    func animateLaunchViewConstraints() {
-        wainNakelLabel.snp.makeConstraints { make in
-            self.wainNakelLblBottomConstraintToSV?.deactivate()
-            make.top.equalTo(resturantIcon.snp.bottom).offset(40)
-        }
-          
-        suggestButton.snp.updateConstraints { make in
-            self.suggestBtnWidthConstraint = make.width.equalTo(150).constraint
-            self.suggestBtnHeightConstraint = make.height.equalTo(50).constraint
-            self.suggestBtnTrailingToSVConstraint = make.trailing.equalTo(self).offset(-75).constraint
-            self.suggestBtnBottmToLblContraint?.activate()
-            self.suggestBtnToSettingBtnConstraint?.deactivate()
-            self.suggestBtnBottomToSVConstraint?.deactivate()
-        }
-        
-        settingsButton.snp.updateConstraints { make in
-            self.settingsBtnWidthConstraint = make.width.equalTo(40).constraint
-            self.settingsBtnHeightConstraint = make.height.equalTo(50).constraint
-            self.settingsBtnLeadingToSVContraint = make.leading.equalTo(self).offset(75).constraint
-            self.settingsBtnBottmToLblContraint?.activate()
-            self.settingsBtnTosuggestBtnConstraint?.deactivate()
-            self.settingsBtnBottomToSVConstraint?.deactivate()
-            self.settingsBtnLeadingToSVContraint?.deactivate()
-        }
-        
-        UIView.animate(withDuration: 2.0) {
-            self.layoutIfNeeded()
-        }
-    }
-    
     override func didMoveToWindow() {
         super.didMoveToWindow()
         constructHierarchy()
         activateConstraints()
-    }
-    
-    func wireTopView() {
-        mapTopView.addSubview(topViewContainerStack)
-        addSubview(mapTopView)
-        topViewContainerStack.snp.makeConstraints { make in
-            make.edges.equalTo(mapTopView).inset(UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
-        }
-        mapTopView.snp.makeConstraints { make in
-            make.width.equalTo(self)
-            make.height.equalTo(self).multipliedBy(0.2)
-            make.bottom.equalTo(self).multipliedBy(-0.2)
-        }
-        
-        mapTopView.layoutIfNeeded()
-        mapTopView.snp.makeConstraints { make in
-            make.bottom.equalTo(self).multipliedBy(0.2)
-        }
-        suggestBtnBottomToSVConstraint?.activate()
-        settingsBtnBottomToSVConstraint?.activate()
-        suggestBtnBottomToSVConstraint?.update(offset: -30)
-        settingsBtnBottomToSVConstraint?.update(offset: -30)
-        settingsButton.isHidden = false
-        suggestButton.backgroundColor = .mainColor
-        suggestButton.setTitle("Suggest Another", for: .normal)
-        suggestButton.setTitleColor(.white, for: .normal)
-        settingsButton.setTitleColor(.white, for: .normal)
-        settingsButton.backgroundColor = .mainColor
-        
-        UIView.animate(withDuration: 0.8) {
-            self.mapTopView.layoutIfNeeded()
-            self.layoutIfNeeded()
-        }
     }
     
     func constructHierarchy() {
@@ -301,28 +243,5 @@ class SuggestionView: BaseView {
         }
         activateLaunchViewConstraints()
         animateLaunchViewConstraints()
-    }
-}
-
-class GradientView: UIView {
-    override open class var layerClass: AnyClass {
-        return CAGradientLayer.classForCoder()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        gradientView()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        gradientView()
-    }
-    
-    func gradientView() {
-        let gradient = self.layer as! CAGradientLayer
-        gradient.colors = [UIColor.mainColor.withAlphaComponent(0.5).cgColor, UIColor.mainDarkColor.withAlphaComponent(1.0).cgColor]
-        gradient.frame = self.bounds
-        backgroundColor = UIColor.clear
     }
 }

@@ -26,6 +26,9 @@ class SuggestionViewController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let view = view as? SuggestionView {
+            view.mapView.delegate = self
+        }
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         setupViewModel()
@@ -35,9 +38,8 @@ class SuggestionViewController: BaseController {
         viewModel.currentLocation
             .observe(on: self) {[weak self] location in
                 guard let self = self else { return }
-                if let location = location, let view = self.view as? SuggestionView {
-                    let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-                    view.mapView.setRegion(region, animated: true)
+                if let location = location {
+                    self.setRegion(location.coordinate)
                     self.viewModel.suggestResturant()
                 }
         }
@@ -52,10 +54,21 @@ class SuggestionViewController: BaseController {
                         let longitude = Double(lng) {
                         let resCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                         let resAnnotation: MKPointAnnotation = MKPointAnnotation()
+                        for annotation in view.mapView.annotations {
+                            view.mapView.removeAnnotation(annotation)
+                        }
                         resAnnotation.coordinate = resCoordinate
+                        
                         view.mapView.addAnnotation(resAnnotation)
+                        self.setRegion(resCoordinate)
                     }
                 }
         }
+    }
+    
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        guard let view = self.view as? SuggestionView else { return }
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        view.mapView.setRegion(region, animated: true)
     }
 }

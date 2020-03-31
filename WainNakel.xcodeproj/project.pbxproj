@@ -10,8 +10,11 @@
 		19CDEF4255DEB9EA5F04C5E6 /* Pods_WainNakel_WainNakelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2036D21F84E53931ACFC3953 /* Pods_WainNakel_WainNakelUITests.framework */; };
 		690151661707D9537B93E3BD /* Pods_WainNakelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8C1202D44AA2845582968F /* Pods_WainNakelTests.framework */; };
 		740EB986C5F4F693942591DC /* Pods_WainNakel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BD184AB06B3EC7588BF716 /* Pods_WainNakel.framework */; };
+		851E8B332433EE7D00B53573 /* SuggestionView+TopWhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */; };
+		851E8B352433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */; };
+		851E8B372433EF4800B53573 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B362433EF4800B53573 /* GradientView.swift */; };
+		851E8B392434053A00B53573 /* SuggestionView+TopBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */; };
 		8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */; };
-		8530FF5B242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
 		85594EF2242BF439009A5141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF0242BF439009A5141 /* Main.storyboard */; };
@@ -31,23 +34,16 @@
 		85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3C242C1633009A5141 /* NetworkManager.swift */; };
 		85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */; };
 		85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */; };
-		85594F46242C255E009A5141 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F45242C255E009A5141 /* SplashViewModel.swift */; };
-		85594F48242C2575009A5141 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F47242C2575009A5141 /* SplashViewController.swift */; };
-		855A0606242E17AE007608AB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0605242E17AE007608AB /* SplashView.swift */; };
 		855A0608242E186E007608AB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0607242E186E007608AB /* BaseView.swift */; };
 		855A060A242E18DA007608AB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0609242E18DA007608AB /* BaseController.swift */; };
-		855A060D242E1967007608AB /* SplashViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A060C242E1967007608AB /* SplashViewModelFactory.swift */; };
 		855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A060E242E2BA3007608AB /* UIColor+AppColors.swift */; };
-		855A061E242E56B9007608AB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A061D242E56B9007608AB /* MainViewModel.swift */; };
-		855A0620242E56D3007608AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A061F242E56D3007608AB /* MainViewController.swift */; };
 		855A0622242E58A1007608AB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0621242E58A1007608AB /* Observable.swift */; };
-		855A0624242E59AC007608AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0623242E59AC007608AB /* MainView.swift */; };
-		855A0626242E5F25007608AB /* SplashViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */; };
 		855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */; };
 		855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */; };
 		8572D5F224326861006415BC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5F124326861006415BC /* UIViewController+Alert.swift */; };
 		8572D5F424329FED006415BC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8572D5F324329FEC006415BC /* README.md */; };
 		8572D5F82432BA61006415BC /* Resturant+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5F72432BA61006415BC /* Resturant+Codable.swift */; };
+		8572D5FA2432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D5F92432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift */; };
 		85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B35158242EC4F900075E62 /* SuggestionViewController.swift */; };
 		85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515A242EC50900075E62 /* SuggestionView.swift */; };
 		85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */; };
@@ -81,8 +77,11 @@
 		5D6F09DA658D4E2C7189928A /* Pods-WainNakel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel.release.xcconfig"; path = "Target Support Files/Pods-WainNakel/Pods-WainNakel.release.xcconfig"; sourceTree = "<group>"; };
 		5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakelTests.release.xcconfig"; path = "Target Support Files/Pods-WainNakelTests/Pods-WainNakelTests.release.xcconfig"; sourceTree = "<group>"; };
 		68F8E4F69DCBF85E067416B7 /* Pods-WainNakel-WainNakelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainNakel-WainNakelUITests.debug.xcconfig"; path = "Target Support Files/Pods-WainNakel-WainNakelUITests/Pods-WainNakel-WainNakelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+TopWhiteView.swift"; sourceTree = "<group>"; };
+		851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+LaunchViewAnimation.swift"; sourceTree = "<group>"; };
+		851E8B362433EF4800B53573 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+TopBlueView.swift"; sourceTree = "<group>"; };
 		8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
-		8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WainNakelSplashDependencyContainer.swift; sourceTree = "<group>"; };
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85594EEC242BF439009A5141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,23 +107,16 @@
 		85594F3C242C1633009A5141 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResturantRepository.swift; sourceTree = "<group>"; };
 		85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSuggestResturantRepository.swift; sourceTree = "<group>"; };
-		85594F45242C255E009A5141 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		85594F47242C2575009A5141 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		855A0605242E17AE007608AB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		855A0607242E186E007608AB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		855A0609242E18DA007608AB /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
-		855A060C242E1967007608AB /* SplashViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelFactory.swift; sourceTree = "<group>"; };
 		855A060E242E2BA3007608AB /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
-		855A061D242E56B9007608AB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		855A061F242E56D3007608AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		855A0621242E58A1007608AB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		855A0623242E59AC007608AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerFactory.swift; sourceTree = "<group>"; };
 		855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelAppDependencyContainer.swift; sourceTree = "<group>"; };
 		855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelSuggestionDependencyContainer.swift; sourceTree = "<group>"; };
 		8572D5F124326861006415BC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		8572D5F324329FEC006415BC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8572D5F72432BA61006415BC /* Resturant+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resturant+Codable.swift"; sourceTree = "<group>"; };
+		8572D5F92432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionViewController+MapViewDelegate.swift"; sourceTree = "<group>"; };
 		85B35158242EC4F900075E62 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		85B3515A242EC50900075E62 /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
 		85B3515C242EC51B00075E62 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
@@ -293,17 +285,6 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		85594F21242BF661009A5141 /* SplashScene */ = {
-			isa = PBXGroup;
-			children = (
-				855A060B242E1952007608AB /* Factory */,
-				855A0604242E1791007608AB /* Views */,
-				85594F44242C22B2009A5141 /* ViewModels */,
-				85594F42242C2282009A5141 /* Controllers */,
-			);
-			path = SplashScene;
-			sourceTree = "<group>";
-		};
 		85594F22242BF6A7009A5141 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,31 +331,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		85594F42242C2282009A5141 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				85594F47242C2575009A5141 /* SplashViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		85594F43242C22A3009A5141 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				855A0619242E5684007608AB /* Main */,
 				855A0612242E3E33007608AB /* Base */,
-				85594F21242BF661009A5141 /* SplashScene */,
 				85B35154242EC45200075E62 /* SuggestionsScene */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		85594F44242C22B2009A5141 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				85594F45242C255E009A5141 /* SplashViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		855A0600242E15BB007608AB /* Extensions */ = {
@@ -394,23 +357,6 @@
 				855A0621242E58A1007608AB /* Observable.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		855A0604242E1791007608AB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				855A0605242E17AE007608AB /* SplashView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		855A060B242E1952007608AB /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				855A060C242E1967007608AB /* SplashViewModelFactory.swift */,
-				855A0625242E5F25007608AB /* SplashViewControllerFactory.swift */,
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		855A0612242E3E33007608AB /* Base */ = {
@@ -438,47 +384,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		855A0619242E5684007608AB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				855A061C242E56A4007608AB /* Views */,
-				855A061B242E5692007608AB /* ViewModels */,
-				855A061A242E5689007608AB /* Controllers */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		855A061A242E5689007608AB /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				855A061F242E56D3007608AB /* MainViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		855A061B242E5692007608AB /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				855A061D242E56B9007608AB /* MainViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		855A061C242E56A4007608AB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				855A0623242E59AC007608AB /* MainView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		855A0627242E6A5F007608AB /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				85594EEA242BF439009A5141 /* AppDelegate.swift */,
 				85594EEC242BF439009A5141 /* SceneDelegate.swift */,
 				855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */,
-				8530FF5A242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift */,
 				855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */,
 			);
 			path = Application;
@@ -506,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				85B35158242EC4F900075E62 /* SuggestionViewController.swift */,
+				8572D5F92432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -514,6 +426,10 @@
 			isa = PBXGroup;
 			children = (
 				85B3515A242EC50900075E62 /* SuggestionView.swift */,
+				851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */,
+				851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */,
+				851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */,
+				851E8B362433EF4800B53573 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -789,35 +705,31 @@
 				85B3515B242EC50900075E62 /* SuggestionView.swift in Sources */,
 				855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */,
 				8572D5F224326861006415BC /* UIViewController+Alert.swift in Sources */,
+				8572D5FA2432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift in Sources */,
+				851E8B392434053A00B53573 /* SuggestionView+TopBlueView.swift in Sources */,
 				85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */,
-				855A0606242E17AE007608AB /* SplashView.swift in Sources */,
-				8530FF5B242F812100FC4FBF /* WainNakelSplashDependencyContainer.swift in Sources */,
 				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
 				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,
-				855A061E242E56B9007608AB /* MainViewModel.swift in Sources */,
 				85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */,
-				85594F48242C2575009A5141 /* SplashViewController.swift in Sources */,
 				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
 				85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */,
+				851E8B332433EE7D00B53573 /* SuggestionView+TopWhiteView.swift in Sources */,
 				855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */,
 				85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */,
-				855A060D242E1967007608AB /* SplashViewModelFactory.swift in Sources */,
 				855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */,
 				85B35159242EC4F900075E62 /* SuggestionViewController.swift in Sources */,
-				85594F46242C255E009A5141 /* SplashViewModel.swift in Sources */,
 				85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */,
 				85594F37242C1044009A5141 /* Networking.swift in Sources */,
 				85594F25242BF826009A5141 /* Resturant.swift in Sources */,
 				8572D5F82432BA61006415BC /* Resturant+Codable.swift in Sources */,
+				851E8B352433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift in Sources */,
 				85594F39242C1505009A5141 /* Reachability.swift in Sources */,
+				851E8B372433EF4800B53573 /* GradientView.swift in Sources */,
 				85594F32242C0720009A5141 /* API.swift in Sources */,
 				855A0608242E186E007608AB /* BaseView.swift in Sources */,
-				855A0626242E5F25007608AB /* SplashViewControllerFactory.swift in Sources */,
 				85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */,
 				85594F3B242C153D009A5141 /* Cache.swift in Sources */,
 				855A0622242E58A1007608AB /* Observable.swift in Sources */,
-				855A0624242E59AC007608AB /* MainView.swift in Sources */,
-				855A0620242E56D3007608AB /* MainViewController.swift in Sources */,
 				855A060A242E18DA007608AB /* BaseController.swift in Sources */,
 				8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */,
 				85594F35242C0E1A009A5141 /* Constants.swift in Sources */,

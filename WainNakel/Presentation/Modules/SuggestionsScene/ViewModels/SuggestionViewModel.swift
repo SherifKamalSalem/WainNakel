@@ -20,11 +20,10 @@ enum SuggestionViewModelLoading {
 }
 
 protocol SuggestionViewModelInput {
-    func viewDidLoad()
 }
 
 protocol SuggestionViewModelOutput {
-    var route: Observable<MainViewModelRoute> { get }
+    var route: Observable<SuggestionViewModelRoute> { get }
     var data: Observable<Resturant?> { get }
     var error: Observable<String> { get }
     var currentLocation: Observable<CLLocation?> { get }
@@ -35,7 +34,7 @@ protocol SuggestionViewModel: SuggestionViewModelInput, SuggestionViewModelOutpu
 
 class DefaultSuggestionViewModel: NSObject, SuggestionViewModel {
     
-    let route: Observable<MainViewModelRoute> = Observable(.launching)
+    let route: Observable<SuggestionViewModelRoute> = Observable(.launch)
     var currentLocation = Observable<CLLocation?>(nil)
     let error: Observable<String> = Observable("")
     let data: Observable<Resturant?> = Observable(nil)
@@ -77,8 +76,6 @@ class DefaultSuggestionViewModel: NSObject, SuggestionViewModel {
             }
         }
     }
-    
-    func viewDidLoad() { }
 }
 
 extension DefaultSuggestionViewModel: CLLocationManagerDelegate {
