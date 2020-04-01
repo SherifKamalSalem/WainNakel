@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//interface for getting random resturants
 protocol SuggestResturantRepository {
      func getRandomResturant(UID: String, completion: @escaping Callback<Resturant>)
 }

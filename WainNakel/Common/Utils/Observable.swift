@@ -9,7 +9,7 @@
 import Foundation
 
 public final class Observable<Value> {
-    
+    //Observable for binding (as this is app use MVVM design pattern)
     struct Observer<Value> {
         weak var observer: AnyObject?
         let block: (Value) -> Void

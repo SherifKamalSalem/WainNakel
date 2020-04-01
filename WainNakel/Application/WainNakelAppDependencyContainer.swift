@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Dependency injection container for app
 class WainNakelAppDIContainer {
     
     func makeRemoteAPI() -> Networking {

@@ -27,6 +27,8 @@ class SuggestionView: BaseView {
     }
     //MARK: - Resturant Icon Constraints
     var resturantIconCenterConstraint: Constraint?
+    var resturantIconWidthConstraint: Constraint?
+    var resturantIconHeightConstraint: Constraint?
     //MARK: - wainNakel label Constraints
     var wainNakelLblBottomConstraintToSV: Constraint?
     var wainNakelLblTopConstraintToLaunchView: Constraint?
@@ -39,13 +41,6 @@ class SuggestionView: BaseView {
     var suggestBtnWidthConstraint: Constraint?
     var suggestBtnHeightConstraint: Constraint?
     var suggestBtnCenterToSVConstraint: Constraint?
-    //MARK: - Settings Button Constraints
-    var settingsBtnBottomToSVConstraint: Constraint?
-    var settingsBtnBottmToLblContraint: Constraint?
-    var settingsBtnLeadingToSVContraint: Constraint?
-    var settingsBtnWidthConstraint: Constraint?
-    var settingsBtnHeightConstraint: Constraint?
-    var settingsBtnTosuggestBtnConstraint: Constraint?
     //MARK: - Top White View Constraints
     var topWhiteViewHeightContraints: Constraint?
     //MARK: - Gradient Launch View Constraints
@@ -91,14 +86,14 @@ class SuggestionView: BaseView {
         stack.axis = .horizontal
         stack.distribution = .equalSpacing
         stack.alignment = .fill
-        stack.spacing = 20
+        stack.spacing = 8
         return stack
     }()
     //MARK: - Top Launch View Container Stack
     lazy var LaunchViewTitleIconStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [wainNakelLabel, resturantIcon])
         stack.axis = .horizontal
-        stack.distribution = .equalSpacing
+        stack.distribution = .equalCentering
         stack.spacing = 8
         return stack
     }()
@@ -126,10 +121,13 @@ class SuggestionView: BaseView {
         button.backgroundColor = .clear
         button.setTitle("", for: .disabled)
         button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
+        button.snp.makeConstraints { make in
+            make.width.height.equalTo(30)
+        }
         button.layer.cornerRadius = button.frame.size.width / 2
         return button
     }()
-    //MARK: (Menu Button) 
+    //MARK: (Menu Button)
     lazy var menuButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = .clear
@@ -137,7 +135,7 @@ class SuggestionView: BaseView {
         button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
         button.layer.cornerRadius = button.frame.size.width / 2
         button.snp.makeConstraints { make in
-            make.width.height.equalTo(40)
+            make.width.height.equalTo(30)
         }
         return button
     }()
@@ -159,17 +157,10 @@ class SuggestionView: BaseView {
         return indicator
     }()
     
-    let settingsButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.backgroundColor = UIColor.white
-        button.layer.cornerRadius = 5
-        button.setImage(#imageLiteral(resourceName: "settingsIcon"), for: .normal)
-        return button
-    }()
-    
     let wainNakelLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.white
+        label.minimumScaleFactor = 0.3
         label.textAlignment = .center
         label.text = Constants.Text.WainNakel
         label.font = .boldSystemFont(ofSize: 30)
@@ -205,33 +196,35 @@ class SuggestionView: BaseView {
         activityIndicatorView.startAnimating()
         animateConstraintAfterSuggestBtnTapped()
     }
-    
+    //for the first time suggest button is pressed
     fileprivate func animateConstraintAfterSuggestBtnTapped() {
         self.suggestBtnWidthConstraint?.update(offset: 200)
         suggestButton.snp.makeConstraints { make in
-            make.centerX.equalTo(self)
             suggestBtnTrailingToSVConstraint?.deactivate()
         }
-        self.settingsButton.isHidden = true
         UIView.animate(withDuration: 0.8) {
             self.layoutIfNeeded()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            self.activityIndicatorView.stopAnimating()
-            self.animateLaunchViewToTopContraints()
+           self.animateLaunchViewToTopContraints()
             self.activateTopWhiteViewContraints()
+            self.activityIndicatorView.stopAnimating()
         }
     }
-    
+    //after launching map the launch view is compressed to top of screen
     fileprivate func animateLaunchViewToTopContraints() {
         self.layoutIfNeeded()
         wainNakelLblBottomConstraintToSV?.deactivate()
         resturantIconCenterConstraint?.deactivate()
+        resturantIconWidthConstraint?.update(offset: 30)
+        resturantIconHeightConstraint?.update(offset: 30)
         gradientView.addSubview(LaunchViewContainerStack)
+        wainNakelLabel.font = .boldSystemFont(ofSize: 14)
+        
         LaunchViewContainerStack.snp.makeConstraints { make in
-            make.width.equalTo(100)
-            make.leading.trailing.equalToSuperview().offset(16)
-            make.top.equalTo(44)
+            make.trailing.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(16)
+            
             make.bottom.equalToSuperview()
         }
         gradientView.snp.updateConstraints { make in
@@ -244,12 +237,11 @@ class SuggestionView: BaseView {
             self.layoutIfNeeded()
         }
     }
-    
+    //add sub views
     func constructLaunchViewHierarchy() {
         self.addSubview(resturantIcon)
         self.addSubview(wainNakelLabel)
         self.addSubview(suggestButton)
-        self.addSubview(settingsButton)
     }
     
     override func didMoveToWindow() {
@@ -263,10 +255,9 @@ class SuggestionView: BaseView {
         mapView.addSubview(gradientView)
         constructLaunchViewHierarchy()
     }
-    
+    ///activate lauch view contraints top bottom left right
     func activateConstraints() {
         mapView.snp.makeConstraints { make in
-            make.center.equalTo(self)
             make.edges.equalTo(self)
         }
         gradientView.snp.makeConstraints { make in
@@ -275,8 +266,8 @@ class SuggestionView: BaseView {
             self.launchViewLeadingContraint = make.leading.equalToSuperview().constraint
             self.launchViewTrailingContraint = make.trailing.equalToSuperview().constraint
             self.launchViewHeightContraint = make.height.equalTo(80).constraint
-            self.launchViewHeightContraint?.deactivate()
         }
+        self.launchViewHeightContraint?.deactivate()
         activateLaunchViewConstraints()
         animateLaunchViewConstraints()
     }

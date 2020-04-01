@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+//check internet connection availability
 class Reachability {
     class var isConnectedToInternet: Bool {
         return NetworkReachabilityManager()!.isReachable

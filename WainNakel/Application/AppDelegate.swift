@@ -15,9 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
+        initUI()
         return true
+    }
+    
+    //setup root view controller
+    private func initUI() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let suggestionViewController: SuggestionViewController = appDIContainer.makeSuggestionDIContainer().makeSuggestViewController()
+        window?.rootViewController = UINavigationController(rootViewController: suggestionViewController)
+        window?.makeKeyAndVisible()
     }
 }
 

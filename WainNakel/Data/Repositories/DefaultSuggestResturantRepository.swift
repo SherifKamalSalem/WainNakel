@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//Concrete repository that dealing with random resturant data
 class DefaultSuggestResturantRepository: SuggestResturantRepository {
     
     private let networkingService: Networking

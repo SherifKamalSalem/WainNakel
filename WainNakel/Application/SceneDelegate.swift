@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         initUI(scene: scene)
     }
-    
+    //setup root view controller
     private func initUI(scene: UIWindowScene) {
         window = UIWindow(windowScene: scene)
         let suggestionViewController: SuggestionViewController = appDIContainer.makeSuggestionDIContainer().makeSuggestViewController()

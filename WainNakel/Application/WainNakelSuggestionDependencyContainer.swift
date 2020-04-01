@@ -8,12 +8,12 @@
 //
 
 import Foundation
-
+//Dependency injection container for suggestion controller
 class WainNakelSuggestionDIContainer {
     func makeSuggestViewController() -> SuggestionViewController {
         return SuggestionViewController(viewModelFactory: makeSuggestionViewModelFactory())
     }
-    
+    ///setup and initialize Suggestion controller view model
     func makeSuggestionViewModelFactory() -> SuggestionViewModelFactory {
         return DefaultSuggestionViewModelFactory()
     }

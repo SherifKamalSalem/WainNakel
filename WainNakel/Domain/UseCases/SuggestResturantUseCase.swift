@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//suggestion resturants use case that handling fetch resturants from repository
 protocol SuggestResturantUseCase {
     func suggestRandomResturant(UID: String, completion: @escaping Callback<Resturant>)
 }

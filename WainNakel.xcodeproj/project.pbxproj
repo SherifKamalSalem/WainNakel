@@ -14,6 +14,8 @@
 		851E8B352433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */; };
 		851E8B372433EF4800B53573 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B362433EF4800B53573 /* GradientView.swift */; };
 		8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */; };
+		854CDD892434F50900BE74DB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CDD862434F50900BE74DB /* BaseView.swift */; };
+		854CDD8B2434F53C00BE74DB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CDD8A2434F53C00BE74DB /* BaseController.swift */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
 		85594EF2242BF439009A5141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85594EF0242BF439009A5141 /* Main.storyboard */; };
@@ -22,8 +24,6 @@
 		85594F02242BF43B009A5141 /* WainNakelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F01242BF43B009A5141 /* WainNakelTests.swift */; };
 		85594F0D242BF43B009A5141 /* WainNakelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F0C242BF43B009A5141 /* WainNakelUITests.swift */; };
 		85594F25242BF826009A5141 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F24242BF826009A5141 /* Resturant.swift */; };
-		85594F2A242C0295009A5141 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F29242C0295009A5141 /* UseCase.swift */; };
-		85594F2C242C0361009A5141 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F2B242C0361009A5141 /* Cancellable.swift */; };
 		85594F2E242C044F009A5141 /* SuggestResturantUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */; };
 		85594F32242C0720009A5141 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F31242C0720009A5141 /* API.swift */; };
 		85594F35242C0E1A009A5141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F34242C0E1A009A5141 /* Constants.swift */; };
@@ -33,8 +33,6 @@
 		85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3C242C1633009A5141 /* NetworkManager.swift */; };
 		85594F3F242C1D9C009A5141 /* SuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */; };
 		85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */; };
-		855A0608242E186E007608AB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0607242E186E007608AB /* BaseView.swift */; };
-		855A060A242E18DA007608AB /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0609242E18DA007608AB /* BaseController.swift */; };
 		855A060F242E2BA3007608AB /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A060E242E2BA3007608AB /* UIColor+AppColors.swift */; };
 		855A0622242E58A1007608AB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A0621242E58A1007608AB /* Observable.swift */; };
 		855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */; };
@@ -80,6 +78,8 @@
 		851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+LaunchViewAnimation.swift"; sourceTree = "<group>"; };
 		851E8B362433EF4800B53573 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		854CDD862434F50900BE74DB /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		854CDD8A2434F53C00BE74DB /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85594EEC242BF439009A5141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +94,6 @@
 		85594F0C242BF43B009A5141 /* WainNakelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WainNakelUITests.swift; sourceTree = "<group>"; };
 		85594F0E242BF43B009A5141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85594F24242BF826009A5141 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
-		85594F29242C0295009A5141 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
-		85594F2B242C0361009A5141 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResturantUseCase.swift; sourceTree = "<group>"; };
 		85594F31242C0720009A5141 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		85594F34242C0E1A009A5141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -105,8 +103,6 @@
 		85594F3C242C1633009A5141 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		85594F3E242C1D9C009A5141 /* SuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResturantRepository.swift; sourceTree = "<group>"; };
 		85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSuggestResturantRepository.swift; sourceTree = "<group>"; };
-		855A0607242E186E007608AB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		855A0609242E18DA007608AB /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		855A060E242E2BA3007608AB /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		855A0621242E58A1007608AB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		855A062A242E7071007608AB /* WainNakelAppDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WainNakelAppDependencyContainer.swift; sourceTree = "<group>"; };
@@ -162,6 +158,15 @@
 				5FBF9B51A2B2277DC5F327C3 /* Pods-WainNakelTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		854CDD8C2434F56800BE74DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				854CDD8A2434F53C00BE74DB /* BaseController.swift */,
+				854CDD862434F50900BE74DB /* BaseView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		85594EDE242BF439009A5141 = {
@@ -233,7 +238,6 @@
 		85594F1B242BF4CA009A5141 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				8572CEE5242D84370011ECB6 /* DI */,
 				85594F1F242BF62D009A5141 /* Interfaces */,
 				85594F1E242BF61A009A5141 /* UseCases */,
 				85594F1D242BF611009A5141 /* Entities */,
@@ -261,7 +265,6 @@
 		85594F1E242BF61A009A5141 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				85594F28242C027F009A5141 /* Protocol */,
 				85594F2D242C044F009A5141 /* SuggestResturantUseCase.swift */,
 			);
 			path = UseCases;
@@ -289,15 +292,6 @@
 				85594F40242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift */,
 			);
 			path = Repositories;
-			sourceTree = "<group>";
-		};
-		85594F28242C027F009A5141 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				85594F29242C0295009A5141 /* UseCase.swift */,
-				85594F2B242C0361009A5141 /* Cancellable.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		85594F2F242C057A009A5141 /* Infrastructure */ = {
@@ -332,7 +326,7 @@
 		85594F43242C22A3009A5141 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				855A0612242E3E33007608AB /* Base */,
+				854CDD8C2434F56800BE74DB /* Base */,
 				85B35154242EC45200075E62 /* SuggestionsScene */,
 			);
 			path = Modules;
@@ -357,31 +351,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		855A0612242E3E33007608AB /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				855A0614242E3E4B007608AB /* Views */,
-				855A0613242E3E3D007608AB /* Controllers */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		855A0613242E3E3D007608AB /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				855A0609242E18DA007608AB /* BaseController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		855A0614242E3E4B007608AB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				855A0607242E186E007608AB /* BaseView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		855A0627242E6A5F007608AB /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,13 +360,6 @@
 				855A062C242E710A007608AB /* WainNakelSuggestionDependencyContainer.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		8572CEE5242D84370011ECB6 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		85B35154242EC45200075E62 /* SuggestionsScene */ = {
@@ -705,9 +667,7 @@
 				8572D5FA2432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift in Sources */,
 				85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */,
 				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
-				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,
 				85B3515D242EC51B00075E62 /* SuggestionViewModel.swift in Sources */,
-				85594F2A242C0295009A5141 /* UseCase.swift in Sources */,
 				85594F3D242C1633009A5141 /* NetworkManager.swift in Sources */,
 				851E8B332433EE7D00B53573 /* SuggestionView+TopWhiteView.swift in Sources */,
 				855A062D242E710B007608AB /* WainNakelSuggestionDependencyContainer.swift in Sources */,
@@ -719,14 +679,14 @@
 				85594F25242BF826009A5141 /* Resturant.swift in Sources */,
 				8572D5F82432BA61006415BC /* Resturant+Codable.swift in Sources */,
 				851E8B352433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift in Sources */,
+				854CDD892434F50900BE74DB /* BaseView.swift in Sources */,
 				85594F39242C1505009A5141 /* Reachability.swift in Sources */,
 				851E8B372433EF4800B53573 /* GradientView.swift in Sources */,
+				854CDD8B2434F53C00BE74DB /* BaseController.swift in Sources */,
 				85594F32242C0720009A5141 /* API.swift in Sources */,
-				855A0608242E186E007608AB /* BaseView.swift in Sources */,
 				85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */,
 				85594F3B242C153D009A5141 /* Cache.swift in Sources */,
 				855A0622242E58A1007608AB /* Observable.swift in Sources */,
-				855A060A242E18DA007608AB /* BaseController.swift in Sources */,
 				8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */,
 				85594F35242C0E1A009A5141 /* Constants.swift in Sources */,
 				85B35162242EC6D000075E62 /* SuggestionViewControllerFactory.swift in Sources */,

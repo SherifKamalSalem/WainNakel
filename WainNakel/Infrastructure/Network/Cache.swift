@@ -12,7 +12,7 @@ import Moya
 protocol CachePolicyGettable {
     var cachePolicy: URLRequest.CachePolicy { get }
 }
-
+//caching api requests
 final class CachePolicyPlugin: PluginType {
     public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         if let cachePolicyGettable = target as? CachePolicyGettable {

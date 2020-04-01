@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Factory Design pattern (getting suggestion controller)
 protocol SuggestionViewControllerFactory {
     func makeSuggestionViewController(viewModel: SuggestionViewModel) -> SuggestionViewController
 }

@@ -11,6 +11,7 @@ import Moya
 
 typealias Callback<T: Decodable> = (T?, Error?) -> Void
 
+//concrete class that conform networking protocol
 struct NetworkManager: Networking {
     internal let provider = MoyaProvider<BaseAPI>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: NetworkLoggerPlugin.Configuration.LogOptions.verbose)), CachePolicyPlugin()])
     fileprivate var jsonDecoder = JSONDecoder()
@@ -18,7 +19,7 @@ struct NetworkManager: Networking {
     func getRandomResturant(UID: String, completion: @escaping Callback<Resturant>) {
         fetchGenericData(endPoint: .getRandomResturant(UID: UID), completion: completion)
     }
-    
+    //generic func that check internet availability and decode json
     fileprivate func fetchGenericData<T: Decodable>(endPoint: BaseAPI, completion: @escaping Callback<T>) {
         if Reachability.isConnectedToInternet {
             provider.request(endPoint) { (result) in
@@ -38,7 +39,6 @@ struct NetworkManager: Networking {
                     default:
                         break
                     }
-                    print("err: \(error)")
                     completion(nil, error)
                 }
             }
