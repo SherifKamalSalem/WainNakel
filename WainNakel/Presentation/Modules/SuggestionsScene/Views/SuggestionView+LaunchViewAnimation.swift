@@ -2,21 +2,21 @@
 //  SuggestionView+LaunchViewAnimation.swift
 //  WainNakel
 //
-//  Created by Xpress Integration on 3/31/20.
+//  Created by Sherif Kamal on 3/31/20.
 //  Copyright © 2020 Aqwas. All rights reserved.
 //
 
 import UIKit
 
 extension SuggestionView {
-    fileprivate func activateLaunchViewConstraints() {
+    func activateLaunchViewConstraints() {
         resturantIcon.snp.makeConstraints { make in
-            make.center.equalTo(self)
+            self.resturantIconCenterConstraint = make.center.equalTo(self).constraint
             make.size.equalTo(70)
         }
         wainNakelLabel.snp.makeConstraints { make in
             self.wainNakelLblBottomConstraintToSV = make.bottom.equalTo(self).offset(50).constraint
-            make.centerX.equalTo(self)
+            self.wainNakelLblCenterXConstraint = make.centerX.equalTo(self).constraint
         }
         activateSuggestButtonConstraints()
         activateSettingsButtonContraints()
@@ -71,7 +71,7 @@ extension SuggestionView {
         }
     }
     
-    fileprivate func animateLaunchViewConstraints() {
+    func animateLaunchViewConstraints() {
         wainNakelLabel.snp.makeConstraints { make in
             self.wainNakelLblBottomConstraintToSV?.deactivate()
             make.top.equalTo(resturantIcon.snp.bottom).offset(40)

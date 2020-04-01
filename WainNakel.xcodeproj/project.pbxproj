@@ -13,7 +13,6 @@
 		851E8B332433EE7D00B53573 /* SuggestionView+TopWhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */; };
 		851E8B352433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */; };
 		851E8B372433EF4800B53573 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B362433EF4800B53573 /* GradientView.swift */; };
-		851E8B392434053A00B53573 /* SuggestionView+TopBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */; };
 		8530FF59242F809000FC4FBF /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */; };
 		85594EEB242BF439009A5141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEA242BF439009A5141 /* AppDelegate.swift */; };
 		85594EED242BF439009A5141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85594EEC242BF439009A5141 /* SceneDelegate.swift */; };
@@ -80,7 +79,6 @@
 		851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+TopWhiteView.swift"; sourceTree = "<group>"; };
 		851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+LaunchViewAnimation.swift"; sourceTree = "<group>"; };
 		851E8B362433EF4800B53573 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SuggestionView+TopBlueView.swift"; sourceTree = "<group>"; };
 		8530FF58242F808F00FC4FBF /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		85594EE7242BF439009A5141 /* WainNakel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WainNakel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85594EEA242BF439009A5141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -428,7 +426,6 @@
 				85B3515A242EC50900075E62 /* SuggestionView.swift */,
 				851E8B342433EEF000B53573 /* SuggestionView+LaunchViewAnimation.swift */,
 				851E8B322433EE7D00B53573 /* SuggestionView+TopWhiteView.swift */,
-				851E8B382434053A00B53573 /* SuggestionView+TopBlueView.swift */,
 				851E8B362433EF4800B53573 /* GradientView.swift */,
 			);
 			path = Views;
@@ -706,7 +703,6 @@
 				855A062B242E7072007608AB /* WainNakelAppDependencyContainer.swift in Sources */,
 				8572D5F224326861006415BC /* UIViewController+Alert.swift in Sources */,
 				8572D5FA2432C5D6006415BC /* SuggestionViewController+MapViewDelegate.swift in Sources */,
-				851E8B392434053A00B53573 /* SuggestionView+TopBlueView.swift in Sources */,
 				85B35160242EC66400075E62 /* SuggestionViewModelFactory.swift in Sources */,
 				85594F41242C1DEE009A5141 /* DefaultSuggestResturantRepository.swift in Sources */,
 				85594F2C242C0361009A5141 /* Cancellable.swift in Sources */,

@@ -2,7 +2,7 @@
 //  SuggestionView+TopWhiteView.swift
 //  WainNakel
 //
-//  Created by Xpress Integration on 3/31/20.
+//  Created by Sherif Kamal on 3/31/20.
 //  Copyright © 2020 Aqwas. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ extension SuggestionView {
             self.topWhiteViewHeightContraints = make.height.equalTo(200).constraint
             make.width.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalTo(gradientView.snp.bottom)
         }
         TopWhiteView.layoutIfNeeded()
         activateSuggestAndSettingsBtns()
