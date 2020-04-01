@@ -12,3 +12,6 @@ This project is Archtectured with MVVM Architecture by seperating project to thr
 * Applying Seperation of concerns by seperating prject to layers
 * Documented code base
 * Memory managment (No retain cycles)
+* Applying Factory design pattern
+* Applying Dependency Inversion control
+* Support iOS 13 (Scene Delegate)
